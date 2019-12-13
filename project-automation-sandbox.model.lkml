@@ -561,7 +561,7 @@ explore: link_book_isbn {
 
 explore: link_coursesection_coursesection {
 
-	join: hub_coursesection_ {
+	join: hub_coursesection_child {
 		from: hub_coursesection
 		
 		
@@ -569,7 +569,7 @@ explore: link_coursesection_coursesection {
 	}
 		
 
-	join: hub_coursesection_ {
+	join: hub_coursesection_master {
 		from: hub_coursesection
 		
 		
@@ -869,7 +869,7 @@ explore: link_product_isbn {
 
 explore: link_product_relationship {
 
-	join: hub_product_ {
+	join: hub_product_parent {
 		from: hub_product
 		
 		
@@ -877,7 +877,7 @@ explore: link_product_relationship {
 	}
 		
 
-	join: hub_product_ {
+	join: hub_product_child {
 		from: hub_product
 		
 		
