@@ -4,28 +4,33 @@ view: link_product_isbn {
 
 
 	dimension_group: _ldts {
-		timeframes: [raw, time, date, week, month, quarter, year]|		type: time
+		timeframes: [raw, time, date, week, month, quarter, year]
+		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
 		
 
-	dimension: _rsrc {|		type: string
+	dimension: _rsrc {
+		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
 		
 
 	dimension: link_product_isbn_key {
-		primary_key: yes|		type: string
+		primary_key: yes
+		type: string
 		sql: ${TABLE}."LINK_PRODUCT_ISBN_KEY" ;;
 	}
 		
 
-	dimension: hub_product_key {|		type: string
+	dimension: hub_product_key {
+		type: string
 		sql: ${TABLE}."HUB_PRODUCT_KEY" ;;
 	}
 		
 
-	dimension: hub_isbn_key {|		type: string
+	dimension: hub_isbn_key {
+		type: string
 		sql: ${TABLE}."HUB_ISBN_KEY" ;;
 	}
 		

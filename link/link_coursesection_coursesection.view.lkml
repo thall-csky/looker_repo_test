@@ -4,28 +4,33 @@ view: link_coursesection_coursesection {
 
 
 	dimension_group: _ldts {
-		timeframes: [raw, time, date, week, month, quarter, year]|		type: time
+		timeframes: [raw, time, date, week, month, quarter, year]
+		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
 		
 
-	dimension: _rsrc {|		type: string
+	dimension: _rsrc {
+		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
 		
 
 	dimension: link_coursesection_coursesection_key {
-		primary_key: yes|		type: string
+		primary_key: yes
+		type: string
 		sql: ${TABLE}."LINK_COURSESECTION_COURSESECTION_KEY" ;;
 	}
 		
 
-	dimension: hub_coursesection_key_child {|		type: string
+	dimension: hub_coursesection_key_child {
+		type: string
 		sql: ${TABLE}."HUB_COURSESECTION_KEY_CHILD" ;;
 	}
 		
 
-	dimension: hub_coursesection_key_master {|		type: string
+	dimension: hub_coursesection_key_master {
+		type: string
 		sql: ${TABLE}."HUB_COURSESECTION_KEY_MASTER" ;;
 	}
 		

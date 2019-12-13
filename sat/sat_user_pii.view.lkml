@@ -4,64 +4,76 @@ view: sat_user_pii {
 
 
 	dimension_group: _ldts {
-		timeframes: [raw, time, date, week, month, quarter, year]|		type: time
+		timeframes: [raw, time, date, week, month, quarter, year]
+		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
 		
 
-	dimension: _rsrc {|		type: string
+	dimension: _rsrc {
+		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
 		
 
 	dimension: hub_user_key {
-		primary_key: yes|		type: string
+		primary_key: yes
+		type: string
 		sql: ${TABLE}."HUB_USER_KEY" ;;
 	}
 		
 
-	dimension: hash_diff {|		type: string
+	dimension: hash_diff {
+		type: string
 		sql: ${TABLE}."HASH_DIFF" ;;
 	}
 		
 
-	dimension: active {|		type: yesno
+	dimension: active {
+		type: yesno
 		sql: ${TABLE}."ACTIVE" ;;
 	}
 		
 
 	dimension_group: rsrc_timestamp {
-		timeframes: [raw, time, date, week, month, quarter, year]|		type: time
+		timeframes: [raw, time, date, week, month, quarter, year]
+		type: time
 		sql: ${TABLE}."RSRC_TIMESTAMP" ;;
 	}
 		
 
-	dimension: login {|		type: string
+	dimension: login {
+		type: string
 		sql: ${TABLE}."LOGIN" ;;
 	}
 		
 
-	dimension: first_name {|		type: string
+	dimension: first_name {
+		type: string
 		sql: ${TABLE}."FIRST_NAME" ;;
 	}
 		
 
-	dimension: last_name {|		type: string
+	dimension: last_name {
+		type: string
 		sql: ${TABLE}."LAST_NAME" ;;
 	}
 		
 
-	dimension: email {|		type: string
+	dimension: email {
+		type: string
 		sql: ${TABLE}."EMAIL" ;;
 	}
 		
 
-	dimension: birth_year {|		type: string
+	dimension: birth_year {
+		type: string
 		sql: ${TABLE}."BIRTH_YEAR" ;;
 	}
 		
 
-	dimension: postal_code {|		type: string
+	dimension: postal_code {
+		type: string
 		sql: ${TABLE}."POSTAL_CODE" ;;
 	}
 		

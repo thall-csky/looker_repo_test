@@ -4,28 +4,33 @@ view: hub_platform {
 
 
 	dimension_group: _ldts {
-		timeframes: [raw, time, date, week, month, quarter, year]|		type: time
+		timeframes: [raw, time, date, week, month, quarter, year]
+		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
 		
 
-	dimension: _rsrc {|		type: string
+	dimension: _rsrc {
+		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
 		
 
 	dimension: hub_platform_key {
-		primary_key: yes|		type: string
+		primary_key: yes
+		type: string
 		sql: ${TABLE}."HUB_PLATFORM_KEY" ;;
 	}
 		
 
-	dimension: platform {|		type: string
+	dimension: platform {
+		type: string
 		sql: ${TABLE}."PLATFORM" ;;
 	}
 		
 
-	dimension: environment {|		type: string
+	dimension: environment {
+		type: string
 		sql: ${TABLE}."ENVIRONMENT" ;;
 	}
 		
