@@ -3,34 +3,22 @@ view: hub_product {
 	sql_table_name: DATAVAULT.HUB_PRODUCT ;;
 
 
-	dimension_group: _ldts {
-		timeframes: [raw, time, date, week, month, quarter, year]
-			 
-		type: time
+	dimension_group: _ldts {|		timeframes: [raw, time, date, week, month, quarter, year]		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
 		
 
-	dimension: _rsrc {
-			 
-			 
-		type: string
+	dimension: _rsrc {		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
 		
 
-	dimension: hub_product_key {
-			 
-		primary_key: yes
-		type: string
+	dimension: hub_product_key {|		primary_key: yes		type: string
 		sql: ${TABLE}."HUB_PRODUCT_KEY" ;;
 	}
 		
 
-	dimension: pid {
-			 
-			 
-		type: string
+	dimension: pid {		type: string
 		sql: ${TABLE}."PID" ;;
 	}
 		

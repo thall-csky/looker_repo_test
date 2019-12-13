@@ -3,50 +3,32 @@ view: sat_user_internal {
 	sql_table_name: DATAVAULT.SAT_USER_INTERNAL ;;
 
 
-	dimension_group: _ldts {
-		timeframes: [raw, time, date, week, month, quarter, year]
-			 
-		type: time
+	dimension_group: _ldts {|		timeframes: [raw, time, date, week, month, quarter, year]		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
 		
 
-	dimension: _rsrc {
-			 
-			 
-		type: string
+	dimension: _rsrc {		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
 		
 
-	dimension: hub_user_key {
-			 
-		primary_key: yes
-		type: string
+	dimension: hub_user_key {|		primary_key: yes		type: string
 		sql: ${TABLE}."HUB_USER_KEY" ;;
 	}
 		
 
-	dimension: hash_diff {
-			 
-			 
-		type: string
+	dimension: hash_diff {		type: string
 		sql: ${TABLE}."HASH_DIFF" ;;
 	}
 		
 
-	dimension: active {
-			 
-			 
-		type: yesno
+	dimension: active {		type: yesno
 		sql: ${TABLE}."ACTIVE" ;;
 	}
 		
 
-	dimension: internal {
-			 
-			 
-		type: yesno
+	dimension: internal {		type: yesno
 		sql: ${TABLE}."INTERNAL" ;;
 	}
 		

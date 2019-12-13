@@ -3,50 +3,32 @@ view: sat_user_institution {
 	sql_table_name: DATAVAULT.SAT_USER_INSTITUTION ;;
 
 
-	dimension_group: _ldts {
-		timeframes: [raw, time, date, week, month, quarter, year]
-			 
-		type: time
+	dimension_group: _ldts {|		timeframes: [raw, time, date, week, month, quarter, year]		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
 		
 
-	dimension: _rsrc {
-			 
-			 
-		type: string
+	dimension: _rsrc {		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
 		
 
-	dimension: link_user_institution_key {
-			 
-		primary_key: yes
-		type: string
+	dimension: link_user_institution_key {|		primary_key: yes		type: string
 		sql: ${TABLE}."LINK_USER_INSTITUTION_KEY" ;;
 	}
 		
 
-	dimension: hash_diff {
-			 
-		primary_key: yes
-		type: string
+	dimension: hash_diff {|		primary_key: yes		type: string
 		sql: ${TABLE}."HASH_DIFF" ;;
 	}
 		
 
-	dimension: active {
-			 
-			 
-		type: yesno
+	dimension: active {		type: yesno
 		sql: ${TABLE}."ACTIVE" ;;
 	}
 		
 
-	dimension_group: created_at {
-		timeframes: [raw, time, date, week, month, quarter, year]
-			 
-		type: time
+	dimension_group: created_at {|		timeframes: [raw, time, date, week, month, quarter, year]		type: time
 		sql: ${TABLE}."CREATED_AT" ;;
 	}
 		

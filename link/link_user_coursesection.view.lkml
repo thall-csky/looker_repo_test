@@ -3,42 +3,27 @@ view: link_user_coursesection {
 	sql_table_name: DATAVAULT.LINK_USER_COURSESECTION ;;
 
 
-	dimension_group: _ldts {
-		timeframes: [raw, time, date, week, month, quarter, year]
-			 
-		type: time
+	dimension_group: _ldts {|		timeframes: [raw, time, date, week, month, quarter, year]		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
 		
 
-	dimension: _rsrc {
-			 
-			 
-		type: string
+	dimension: _rsrc {		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
 		
 
-	dimension: link_user_coursesection_key {
-			 
-		primary_key: yes
-		type: string
+	dimension: link_user_coursesection_key {|		primary_key: yes		type: string
 		sql: ${TABLE}."LINK_USER_COURSESECTION_KEY" ;;
 	}
 		
 
-	dimension: hub_user_key {
-			 
-			 
-		type: string
+	dimension: hub_user_key {		type: string
 		sql: ${TABLE}."HUB_USER_KEY" ;;
 	}
 		
 
-	dimension: hub_coursesection_key {
-			 
-			 
-		type: string
+	dimension: hub_coursesection_key {		type: string
 		sql: ${TABLE}."HUB_COURSESECTION_KEY" ;;
 	}
 		

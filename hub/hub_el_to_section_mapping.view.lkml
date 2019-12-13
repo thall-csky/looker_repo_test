@@ -3,58 +3,37 @@ view: hub_el_to_section_mapping {
 	sql_table_name: DATAVAULT.HUB_EL_TO_SECTION_MAPPING ;;
 
 
-	dimension_group: _ldts {
-		timeframes: [raw, time, date, week, month, quarter, year]
-			 
-		type: time
+	dimension_group: _ldts {|		timeframes: [raw, time, date, week, month, quarter, year]		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
 		
 
-	dimension: _rsrc {
-			 
-			 
-		type: string
+	dimension: _rsrc {		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
 		
 
-	dimension: context_id {
-			 
-			 
-		type: string
+	dimension: context_id {		type: string
 		sql: ${TABLE}."CONTEXT_ID" ;;
 	}
 		
 
-	dimension: enterprise_license {
-			 
-			 
-		type: string
+	dimension: enterprise_license {		type: string
 		sql: ${TABLE}."ENTERPRISE_LICENSE" ;;
 	}
 		
 
-	dimension: environment {
-			 
-			 
-		type: string
+	dimension: environment {		type: string
 		sql: ${TABLE}."ENVIRONMENT" ;;
 	}
 		
 
-	dimension: platform {
-			 
-			 
-		type: string
+	dimension: platform {		type: string
 		sql: ${TABLE}."PLATFORM" ;;
 	}
 		
 
-	dimension: hub_el_to_section_mapping_key {
-			 
-			 
-		type: string
+	dimension: hub_el_to_section_mapping_key {		type: string
 		sql: ${TABLE}."HUB_EL_TO_SECTION_MAPPING_KEY" ;;
 	}
 		
