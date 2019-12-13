@@ -90,7 +90,7 @@ view: sat_user_product_serialnumber {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_user_product_serialnumber_key, hash_diff, event_time_date, event_time_week, event_time_month, event_time_quarter, event_time_year, registration_date_date, registration_date_week, registration_date_month, registration_date_quarter, registration_date_year, modified_by, institution_id, region, user_type, order_number]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hash_diff, event_time_date, event_time_week, event_time_month, event_time_quarter, event_time_year, registration_date_date, registration_date_week, registration_date_month, registration_date_quarter, registration_date_year, modified_by, institution_id, region, user_type, order_number]
 	}
 		 
 

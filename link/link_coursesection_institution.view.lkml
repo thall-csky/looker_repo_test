@@ -48,7 +48,7 @@ view: link_coursesection_institution {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_coursesection_institution_key, hub_institution_key, hub_coursesection_key]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_institution_key, hub_coursesection_key]
 	}
 		 
 

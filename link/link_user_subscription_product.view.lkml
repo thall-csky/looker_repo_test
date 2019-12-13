@@ -55,7 +55,7 @@ view: link_user_subscription_product {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_user_subscription_product_key, hub_user_key, hub_subscription_key, hub_product_key]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_user_key, hub_subscription_key, hub_product_key]
 	}
 		 
 
