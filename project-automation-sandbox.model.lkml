@@ -1,5 +1,5 @@
 
-connection: snowflake_prod_datavault
+connection: "snowflake_prod_datavault"
 
 include: "link/*.view.lkml"
 include: "sat/*.view.lkml"
