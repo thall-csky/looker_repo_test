@@ -3,52 +3,56 @@ view: sat_reader_event {
 	sql_table_name: DATAVAULT.SAT_READER_EVENT ;;
 
 
-	dimension_group: _ldts {|		timeframes: [raw, time, date, week, month, quarter, year]		type: time
+	dimension_group: _ldts {
+		timeframes: [raw, time, date, week, month, quarter, year]|		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
 		
 
-	dimension: _rsrc {		type: string
+	dimension: _rsrc {|		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
 		
 
-	dimension: link_user_book_key {|		primary_key: yes		type: string
+	dimension: link_user_book_key {
+		primary_key: yes|		type: string
 		sql: ${TABLE}."LINK_USER_BOOK_KEY" ;;
 	}
 		
 
-	dimension: hash_diff {|		primary_key: yes		type: string
+	dimension: hash_diff {
+		primary_key: yes|		type: string
 		sql: ${TABLE}."HASH_DIFF" ;;
 	}
 		
 
-	dimension: event_source {		type: string
+	dimension: event_source {|		type: string
 		sql: ${TABLE}."EVENT_SOURCE" ;;
 	}
 		
 
-	dimension: event_id {		type: string
+	dimension: event_id {|		type: string
 		sql: ${TABLE}."EVENT_ID" ;;
 	}
 		
 
-	dimension: event_session_id {		type: string
+	dimension: event_session_id {|		type: string
 		sql: ${TABLE}."EVENT_SESSION_ID" ;;
 	}
 		
 
-	dimension: event_category {		type: string
+	dimension: event_category {|		type: string
 		sql: ${TABLE}."EVENT_CATEGORY" ;;
 	}
 		
 
-	dimension: event_action {		type: string
+	dimension: event_action {|		type: string
 		sql: ${TABLE}."EVENT_ACTION" ;;
 	}
 		
 
-	dimension_group: event_time {|		timeframes: [raw, time, date, week, month, quarter, year]		type: time
+	dimension_group: event_time {
+		timeframes: [raw, time, date, week, month, quarter, year]|		type: time
 		sql: ${TABLE}."EVENT_TIME" ;;
 	}
 		

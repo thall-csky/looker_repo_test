@@ -3,22 +3,24 @@ view: hub_institution {
 	sql_table_name: DATAVAULT.HUB_INSTITUTION ;;
 
 
-	dimension_group: _ldts {|		timeframes: [raw, time, date, week, month, quarter, year]		type: time
+	dimension_group: _ldts {
+		timeframes: [raw, time, date, week, month, quarter, year]|		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
 		
 
-	dimension: _rsrc {		type: string
+	dimension: _rsrc {|		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
 		
 
-	dimension: hub_institution_key {|		primary_key: yes		type: string
+	dimension: hub_institution_key {
+		primary_key: yes|		type: string
 		sql: ${TABLE}."HUB_INSTITUTION_KEY" ;;
 	}
 		
 
-	dimension: institution_id {		type: string
+	dimension: institution_id {|		type: string
 		sql: ${TABLE}."INSTITUTION_ID" ;;
 	}
 		
