@@ -3,7 +3,7 @@ view: sat_enrollment {
 	sql_table_name: DATAVAULT.SAT_ENROLLMENT ;;
 
 
-	dimension: link_user_coursesection_key__ldts {
+	dimension: link_user_coursesection_key_ldts {
 		primary_key: yes
 		type: string
 		sql: ${TABLE}."LINK_USER_COURSESECTION_KEY", ' ', ${TABLE}."_LDTS" ;;

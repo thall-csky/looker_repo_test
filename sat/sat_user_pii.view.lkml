@@ -3,7 +3,7 @@ view: sat_user_pii {
 	sql_table_name: DATAVAULT.SAT_USER_PII ;;
 
 
-	dimension: hub_user_key__ldts {
+	dimension: hub_user_key_ldts {
 		primary_key: yes
 		type: string
 		sql: ${TABLE}."HUB_USER_KEY", ' ', ${TABLE}."_LDTS" ;;

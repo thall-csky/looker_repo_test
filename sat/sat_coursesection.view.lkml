@@ -3,7 +3,7 @@ view: sat_coursesection {
 	sql_table_name: DATAVAULT.SAT_COURSESECTION ;;
 
 
-	dimension: hub_coursesection_key__ldts {
+	dimension: hub_coursesection_key_ldts {
 		primary_key: yes
 		type: string
 		sql: ${TABLE}."HUB_COURSESECTION_KEY", ' ', ${TABLE}."_LDTS" ;;

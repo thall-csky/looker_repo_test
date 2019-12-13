@@ -3,7 +3,7 @@ view: sat_serialnumber {
 	sql_table_name: DATAVAULT.SAT_SERIALNUMBER ;;
 
 
-	dimension: hub_serialnumber_key__ldts {
+	dimension: hub_serialnumber_key_ldts {
 		primary_key: yes
 		type: string
 		sql: ${TABLE}."HUB_SERIALNUMBER_KEY", ' ', ${TABLE}."_LDTS" ;;
