@@ -501,15 +501,15 @@ explore: link_coursesection_coursesection {
 
 	join: hub_coursesection {
 		
-		sql_on: ${hub_coursesection_key_child} = ${hub_coursesection.hub_coursesection_key} ;;
-		foreign_key: hub_coursesection_key
+		
+		foreign_key: hub_coursesection_key_child
 	}
 		
 
 	join: hub_coursesection {
 		
-		sql_on: ${hub_coursesection_key_master} = ${hub_coursesection.hub_coursesection_key} ;;
-		foreign_key: hub_coursesection_key
+		
+		foreign_key: hub_coursesection_key_master
 	}
 		
 }
@@ -773,15 +773,15 @@ explore: link_product_relationship {
 
 	join: hub_product {
 		
-		sql_on: ${hub_parent_product_key} = ${hub_product.hub_product_key} ;;
-		foreign_key: hub_product_key
+		
+		foreign_key: hub_parent_product_key
 	}
 		
 
 	join: hub_product {
 		
-		sql_on: ${hub_child_product_key} = ${hub_product.hub_product_key} ;;
-		foreign_key: hub_product_key
+		
+		foreign_key: hub_child_product_key
 	}
 		
 
