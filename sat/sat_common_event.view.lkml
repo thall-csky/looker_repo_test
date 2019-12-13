@@ -10,6 +10,18 @@ view: sat_common_event {
 	}
 		
 
+	dimension: link_user_platform_key {
+		type: string
+		sql: ${TABLE}."LINK_USER_PLATFORM_KEY" ;;
+	}
+		
+
+	dimension: hash_diff {
+		type: string
+		sql: ${TABLE}."HASH_DIFF" ;;
+	}
+		
+
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -88,7 +100,7 @@ view: sat_common_event {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, event_id, event_category, event_action, event_time_date, event_time_week, event_time_month, event_time_quarter, event_time_year, event_duration, event_uri, session_id, host_platform, host_environment]
+		fields: [link_user_platform_key, hash_diff, _ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, event_id, event_category, event_action, event_time_date, event_time_week, event_time_month, event_time_quarter, event_time_year, event_duration, event_uri, session_id, host_platform, host_environment]
 	}
 		 
 

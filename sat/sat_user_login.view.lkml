@@ -10,6 +10,19 @@ view: sat_user_login {
 	}
 		
 
+	dimension_group: _ldts {
+		timeframes: [raw, time, date, week, month, quarter, year]
+		type: time
+		sql: ${TABLE}."_LDTS" ;;
+	}
+		
+
+	dimension: hub_user_key {
+		type: string
+		sql: ${TABLE}."HUB_USER_KEY" ;;
+	}
+		
+
 	dimension: _rsrc {
 		type: string
 		sql: ${TABLE}."_RSRC" ;;
@@ -75,7 +88,7 @@ view: sat_user_login {
 
 
 	set: all_dims_but_primary {
-		fields: [_rsrc, hash_diff, event_time_date, event_time_week, event_time_month, event_time_quarter, event_time_year, platform, use_type, success, is_minor, note, client_id]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, hub_user_key, _rsrc, hash_diff, event_time_date, event_time_week, event_time_month, event_time_quarter, event_time_year, platform, use_type, success, is_minor, note, client_id]
 	}
 		 
 

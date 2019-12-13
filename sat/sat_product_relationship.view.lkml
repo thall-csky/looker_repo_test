@@ -10,6 +10,18 @@ view: sat_product_relationship {
 	}
 		
 
+	dimension: link_product_relationship_key {
+		type: string
+		sql: ${TABLE}."LINK_PRODUCT_RELATIONSHIP_KEY" ;;
+	}
+		
+
+	dimension: hash_diff {
+		type: string
+		sql: ${TABLE}."HASH_DIFF" ;;
+	}
+		
+
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -39,7 +51,7 @@ view: sat_product_relationship {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, level]
+		fields: [link_product_relationship_key, hash_diff, _ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, level]
 	}
 		 
 

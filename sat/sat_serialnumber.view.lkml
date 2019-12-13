@@ -10,6 +10,19 @@ view: sat_serialnumber {
 	}
 		
 
+	dimension_group: _ldts {
+		timeframes: [raw, time, date, week, month, quarter, year]
+		type: time
+		sql: ${TABLE}."_LDTS" ;;
+	}
+		
+
+	dimension: hub_serialnumber_key {
+		type: string
+		sql: ${TABLE}."HUB_SERIALNUMBER_KEY" ;;
+	}
+		
+
 	dimension: _rsrc {
 		type: string
 		sql: ${TABLE}."_RSRC" ;;
@@ -87,7 +100,7 @@ view: sat_serialnumber {
 
 
 	set: all_dims_but_primary {
-		fields: [_rsrc, hash_diff, is_latest_state, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, src_platform, src_environment, subscription_length_in_days, platform, code_type, referring_isbn, revoked]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, hub_serialnumber_key, _rsrc, hash_diff, is_latest_state, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, src_platform, src_environment, subscription_length_in_days, platform, code_type, referring_isbn, revoked]
 	}
 		 
 

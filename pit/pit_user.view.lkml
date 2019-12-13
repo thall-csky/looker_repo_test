@@ -10,6 +10,19 @@ view: pit_user {
 	}
 		
 
+	dimension_group: _ldts {
+		timeframes: [raw, time, date, week, month, quarter, year]
+		type: time
+		sql: ${TABLE}."_LDTS" ;;
+	}
+		
+
+	dimension: hub_user_key {
+		type: string
+		sql: ${TABLE}."HUB_USER_KEY" ;;
+	}
+		
+
 	dimension_group: sat_user_ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -55,7 +68,7 @@ view: pit_user {
 
 
 	set: all_dims_but_primary {
-		fields: [sat_user_ldts_date, sat_user_ldts_week, sat_user_ldts_month, sat_user_ldts_quarter, sat_user_ldts_year, sat_user_pii_ldts_date, sat_user_pii_ldts_week, sat_user_pii_ldts_month, sat_user_pii_ldts_quarter, sat_user_pii_ldts_year, sat_user_login_ldts_date, sat_user_login_ldts_week, sat_user_login_ldts_month, sat_user_login_ldts_quarter, sat_user_login_ldts_year, sat_user_marketing_ldts_date, sat_user_marketing_ldts_week, sat_user_marketing_ldts_month, sat_user_marketing_ldts_quarter, sat_user_marketing_ldts_year, sat_user_internal_ldts_date, sat_user_internal_ldts_week, sat_user_internal_ldts_month, sat_user_internal_ldts_quarter, sat_user_internal_ldts_year]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, hub_user_key, sat_user_ldts_date, sat_user_ldts_week, sat_user_ldts_month, sat_user_ldts_quarter, sat_user_ldts_year, sat_user_pii_ldts_date, sat_user_pii_ldts_week, sat_user_pii_ldts_month, sat_user_pii_ldts_quarter, sat_user_pii_ldts_year, sat_user_login_ldts_date, sat_user_login_ldts_week, sat_user_login_ldts_month, sat_user_login_ldts_quarter, sat_user_login_ldts_year, sat_user_marketing_ldts_date, sat_user_marketing_ldts_week, sat_user_marketing_ldts_month, sat_user_marketing_ldts_quarter, sat_user_marketing_ldts_year, sat_user_internal_ldts_date, sat_user_internal_ldts_week, sat_user_internal_ldts_month, sat_user_internal_ldts_quarter, sat_user_internal_ldts_year]
 	}
 		 
 

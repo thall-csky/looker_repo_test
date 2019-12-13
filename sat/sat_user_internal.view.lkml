@@ -10,6 +10,19 @@ view: sat_user_internal {
 	}
 		
 
+	dimension_group: _ldts {
+		timeframes: [raw, time, date, week, month, quarter, year]
+		type: time
+		sql: ${TABLE}."_LDTS" ;;
+	}
+		
+
+	dimension: hub_user_key {
+		type: string
+		sql: ${TABLE}."HUB_USER_KEY" ;;
+	}
+		
+
 	dimension: _rsrc {
 		type: string
 		sql: ${TABLE}."_RSRC" ;;
@@ -44,7 +57,7 @@ view: sat_user_internal {
 
 
 	set: all_dims_but_primary {
-		fields: [_rsrc, hash_diff, active, internal]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, hub_user_key, _rsrc, hash_diff, active, internal]
 	}
 		 
 

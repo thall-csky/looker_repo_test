@@ -10,6 +10,18 @@ view: sat_product_attr {
 	}
 		
 
+	dimension: hub_product_key {
+		type: string
+		sql: ${TABLE}."HUB_PRODUCT_KEY" ;;
+	}
+		
+
+	dimension: hash_diff {
+		type: string
+		sql: ${TABLE}."HASH_DIFF" ;;
+	}
+		
+
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -52,7 +64,7 @@ view: sat_product_attr {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, attr_type_id, attr_value]
+		fields: [hub_product_key, hash_diff, _ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, attr_type_id, attr_value]
 	}
 		 
 
