@@ -5,34 +5,39 @@ view: sat_user_institution {
 
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
+			 
 		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
 		
 
 	dimension: _rsrc {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
 		
 
 	dimension: link_user_institution_key {
-		
+			 
+		primary_key: yes
 		type: string
 		sql: ${TABLE}."LINK_USER_INSTITUTION_KEY" ;;
 	}
 		
 
 	dimension: hash_diff {
-		
+			 
+		primary_key: yes
 		type: string
 		sql: ${TABLE}."HASH_DIFF" ;;
 	}
 		
 
 	dimension: active {
-		
+			 
+			 
 		type: yesno
 		sql: ${TABLE}."ACTIVE" ;;
 	}
@@ -40,6 +45,7 @@ view: sat_user_institution {
 
 	dimension_group: created_at {
 		timeframes: [raw, time, date, week, month, quarter, year]
+			 
 		type: time
 		sql: ${TABLE}."CREATED_AT" ;;
 	}

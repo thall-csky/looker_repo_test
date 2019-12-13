@@ -5,34 +5,39 @@ view: sat_provisioned_product {
 
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
+			 
 		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
 		
 
 	dimension: _rsrc {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
 		
 
 	dimension: link_user_product_key {
-		
+			 
+		primary_key: yes
 		type: string
 		sql: ${TABLE}."LINK_USER_PRODUCT_KEY" ;;
 	}
 		
 
 	dimension: hash_diff {
-		
+			 
+		primary_key: yes
 		type: string
 		sql: ${TABLE}."HASH_DIFF" ;;
 	}
 		
 
 	dimension: is_latest_state {
-		
+			 
+			 
 		type: yesno
 		sql: ${TABLE}."IS_LATEST_STATE" ;;
 	}
@@ -40,20 +45,23 @@ view: sat_provisioned_product {
 
 	dimension_group: rsrc_timestamp {
 		timeframes: [raw, time, date, week, month, quarter, year]
+			 
 		type: time
 		sql: ${TABLE}."RSRC_TIMESTAMP" ;;
 	}
 		
 
 	dimension: src_environment {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."SRC_ENVIRONMENT" ;;
 	}
 		
 
 	dimension: src_platform {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."SRC_PLATFORM" ;;
 	}
@@ -61,6 +69,7 @@ view: sat_provisioned_product {
 
 	dimension_group: date_added {
 		timeframes: [raw, time, date, week, month, quarter, year]
+			 
 		type: time
 		sql: ${TABLE}."DATE_ADDED" ;;
 	}
@@ -68,62 +77,71 @@ view: sat_provisioned_product {
 
 	dimension_group: expiration_date {
 		timeframes: [raw, time, date, week, month, quarter, year]
+			 
 		type: time
 		sql: ${TABLE}."EXPIRATION_DATE" ;;
 	}
 		
 
 	dimension: context_id {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."CONTEXT_ID" ;;
 	}
 		
 
 	dimension: source {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."SOURCE" ;;
 	}
 		
 
 	dimension: source_id {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."SOURCE_ID" ;;
 	}
 		
 
 	dimension: code_type {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."CODE_TYPE" ;;
 	}
 		
 
 	dimension: deleted {
-		
+			 
+			 
 		type: yesno
 		sql: ${TABLE}."DELETED" ;;
 	}
 		
 
 	dimension: order_number {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."ORDER_NUMBER" ;;
 	}
 		
 
 	dimension: provisioned_product_row_id {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."PROVISIONED_PRODUCT_ROW_ID" ;;
 	}
 		
 
 	dimension: modified_by {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."MODIFIED_BY" ;;
 	}
@@ -131,62 +149,71 @@ view: sat_provisioned_product {
 
 	dimension_group: payment_date {
 		timeframes: [raw, time, date, week, month, quarter, year]
+			 
 		type: time
 		sql: ${TABLE}."PAYMENT_DATE" ;;
 	}
 		
 
 	dimension: payment_type {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."PAYMENT_TYPE" ;;
 	}
 		
 
 	dimension: provisioning_type {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."PROVISIONING_TYPE" ;;
 	}
 		
 
 	dimension: core_text_isbn {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."CORE_TEXT_ISBN" ;;
 	}
 		
 
 	dimension: iac_isbn {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."IAC_ISBN" ;;
 	}
 		
 
 	dimension: user_type {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."USER_TYPE" ;;
 	}
 		
 
 	dimension: user_environment {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."USER_ENVIRONMENT" ;;
 	}
 		
 
 	dimension: institution_id {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."INSTITUTION_ID" ;;
 	}
 		
 
 	dimension: region {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."REGION" ;;
 	}

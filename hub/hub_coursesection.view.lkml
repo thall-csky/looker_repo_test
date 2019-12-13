@@ -5,41 +5,47 @@ view: hub_coursesection {
 
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
+			 
 		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
 		
 
 	dimension: _rsrc {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
 		
 
 	dimension: hub_coursesection_key {
-		
+			 
+		primary_key: yes
 		type: string
 		sql: ${TABLE}."HUB_COURSESECTION_KEY" ;;
 	}
 		
 
 	dimension: context_id {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."CONTEXT_ID" ;;
 	}
 		
 
 	dimension: environment {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."ENVIRONMENT" ;;
 	}
 		
 
 	dimension: platform {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."PLATFORM" ;;
 	}

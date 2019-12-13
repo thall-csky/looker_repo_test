@@ -5,41 +5,47 @@ view: hub_enterpriselicense {
 
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
+			 
 		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
 		
 
 	dimension: _rsrc {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
 		
 
 	dimension: hub_enterpriselicense_key {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."HUB_ENTERPRISELICENSE_KEY" ;;
 	}
 		
 
 	dimension: enterprise_license {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."ENTERPRISE_LICENSE" ;;
 	}
 		
 
 	dimension: environment {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."ENVIRONMENT" ;;
 	}
 		
 
 	dimension: platform {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."PLATFORM" ;;
 	}

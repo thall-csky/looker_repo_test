@@ -5,34 +5,39 @@ view: link_coursesection_isbn {
 
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
+			 
 		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
 		
 
 	dimension: _rsrc {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
 		
 
 	dimension: link_coursesection_isbn_key {
-		
+			 
+		primary_key: yes
 		type: string
 		sql: ${TABLE}."LINK_COURSESECTION_ISBN_KEY" ;;
 	}
 		
 
 	dimension: hub_isbn_key {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."HUB_ISBN_KEY" ;;
 	}
 		
 
 	dimension: hub_coursesection_key {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."HUB_COURSESECTION_KEY" ;;
 	}

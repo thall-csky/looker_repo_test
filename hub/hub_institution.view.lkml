@@ -5,27 +5,31 @@ view: hub_institution {
 
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
+			 
 		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
 		
 
 	dimension: _rsrc {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
 		
 
 	dimension: hub_institution_key {
-		
+			 
+		primary_key: yes
 		type: string
 		sql: ${TABLE}."HUB_INSTITUTION_KEY" ;;
 	}
 		
 
 	dimension: institution_id {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."INSTITUTION_ID" ;;
 	}

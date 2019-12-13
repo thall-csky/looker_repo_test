@@ -5,27 +5,31 @@ view: sat_order {
 
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
+			 
 		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
 		
 
 	dimension: _rsrc {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
 		
 
 	dimension: link_user_contract_key {
-		
+			 
+		primary_key: yes
 		type: string
 		sql: ${TABLE}."LINK_USER_CONTRACT_KEY" ;;
 	}
 		
 
 	dimension: hash_diff {
-		
+			 
+		primary_key: yes
 		type: string
 		sql: ${TABLE}."HASH_DIFF" ;;
 	}
@@ -33,27 +37,31 @@ view: sat_order {
 
 	dimension_group: rsrc_timestamp {
 		timeframes: [raw, time, date, week, month, quarter, year]
+			 
 		type: time
 		sql: ${TABLE}."RSRC_TIMESTAMP" ;;
 	}
 		
 
 	dimension: order_id {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."ORDER_ID" ;;
 	}
 		
 
 	dimension: internal {
-		
+			 
+			 
 		type: yesno
 		sql: ${TABLE}."INTERNAL" ;;
 	}
 		
 
 	dimension: currency_code {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."CURRENCY_CODE" ;;
 	}
@@ -61,48 +69,55 @@ view: sat_order {
 
 	dimension_group: order_date {
 		timeframes: [raw, time, date, week, month, quarter, year]
+			 
 		type: time
 		sql: ${TABLE}."ORDER_DATE" ;;
 	}
 		
 
 	dimension: order_source {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."ORDER_SOURCE" ;;
 	}
 		
 
 	dimension: order_taken_by {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."ORDER_TAKEN_BY" ;;
 	}
 		
 
 	dimension: total_amount {
-		
+			 
+			 
 		type: number
 		sql: ${TABLE}."TOTAL_AMOUNT" ;;
 	}
 		
 
 	dimension: po_number {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."PO_NUMBER" ;;
 	}
 		
 
 	dimension: processed_method {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."PROCESSED_METHOD" ;;
 	}
 		
 
 	dimension: store_id {
-		
+			 
+			 
 		type: string
 		sql: ${TABLE}."STORE_ID" ;;
 	}
