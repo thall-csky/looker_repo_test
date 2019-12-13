@@ -139,7 +139,7 @@ view: sat_user {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts, _rsrc, hub_user_key, hash_diff, active, rsrc_timestamp, created_by, src_environment, src_platform, account_type, linked_guid, instructor, k12, cengage_crowd_id, note, country, region, user_timezone]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_user_key, hash_diff, active, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, created_by, src_environment, src_platform, account_type, linked_guid, instructor, k12, cengage_crowd_id, note, country, region, user_timezone]
 	}
 		 
 

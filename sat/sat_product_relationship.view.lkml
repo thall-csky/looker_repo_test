@@ -48,7 +48,7 @@ view: sat_product_relationship {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts, _rsrc, link_product_relationship_key, hash_diff, level]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_product_relationship_key, hash_diff, level]
 	}
 		 
 

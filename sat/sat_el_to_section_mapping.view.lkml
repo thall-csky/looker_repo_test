@@ -69,7 +69,7 @@ view: sat_el_to_section_mapping {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts, _rsrc, hub_el_to_section_mapping_key, hash_diff, rsrc_timestamp, event_time, is_latest_state, deleted]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_el_to_section_mapping_key, hash_diff, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, event_time_date, event_time_week, event_time_month, event_time_quarter, event_time_year, is_latest_state, deleted]
 	}
 		 
 

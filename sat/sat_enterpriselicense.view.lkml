@@ -202,7 +202,7 @@ view: sat_enterpriselicense {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts, _rsrc, hub_enterpriselicense_key, hash_diff, is_latest_state, rsrc_timestamp, created_on, begin_date, end_date, note, institution_id, institution_id_override, deleted, iac_isbn13, multi_term_isbn13, core_text_isbn13, product_type, cu_isbn13, cu_enabled, el_contract_id, el_type, el_max_seat, el_class_test, is_demo, opt_out_enabled, opt_out_days, opt_out_end_date]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_enterpriselicense_key, hash_diff, is_latest_state, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, created_on_date, created_on_week, created_on_month, created_on_quarter, created_on_year, begin_date_date, begin_date_week, begin_date_month, begin_date_quarter, begin_date_year, end_date_date, end_date_week, end_date_month, end_date_quarter, end_date_year, note, institution_id, institution_id_override, deleted, iac_isbn13, multi_term_isbn13, core_text_isbn13, product_type, cu_isbn13, cu_enabled, el_contract_id, el_type, el_max_seat, el_class_test, is_demo, opt_out_enabled, opt_out_days, opt_out_end_date_date, opt_out_end_date_week, opt_out_end_date_month, opt_out_end_date_quarter, opt_out_end_date_year]
 	}
 		 
 

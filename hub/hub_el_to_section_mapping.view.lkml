@@ -62,7 +62,7 @@ view: hub_el_to_section_mapping {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts, _rsrc, context_id, enterprise_license, environment, platform, hub_el_to_section_mapping_key]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, context_id, enterprise_license, environment, platform, hub_el_to_section_mapping_key]
 	}
 		 
 

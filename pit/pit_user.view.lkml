@@ -62,7 +62,7 @@ view: pit_user {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts, hub_user_key, sat_user_ldts, sat_user_pii_ldts, sat_user_login_ldts, sat_user_marketing_ldts, sat_user_internal_ldts]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, hub_user_key, sat_user_ldts_date, sat_user_ldts_week, sat_user_ldts_month, sat_user_ldts_quarter, sat_user_ldts_year, sat_user_pii_ldts_date, sat_user_pii_ldts_week, sat_user_pii_ldts_month, sat_user_pii_ldts_quarter, sat_user_pii_ldts_year, sat_user_login_ldts_date, sat_user_login_ldts_week, sat_user_login_ldts_month, sat_user_login_ldts_quarter, sat_user_login_ldts_year, sat_user_marketing_ldts_date, sat_user_marketing_ldts_week, sat_user_marketing_ldts_month, sat_user_marketing_ldts_quarter, sat_user_marketing_ldts_year, sat_user_internal_ldts_date, sat_user_internal_ldts_week, sat_user_internal_ldts_month, sat_user_internal_ldts_quarter, sat_user_internal_ldts_year]
 	}
 		 
 

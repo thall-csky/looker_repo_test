@@ -48,7 +48,7 @@ view: link_user_platform {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts, _rsrc, link_user_platform_key, hub_user_key, hub_platform_key]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_user_platform_key, hub_user_key, hub_platform_key]
 	}
 		 
 

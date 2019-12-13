@@ -125,7 +125,7 @@ view: sat_product {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts, _rsrc, hub_product_key, hash_diff, active, rsrc_timestamp, name, type, part_id, create_date, modified_by, subscription_duration, access_code_type, pubco_publisher_id, pubco_product_id, deleted]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_product_key, hash_diff, active, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, name, type, part_id, create_date_date, create_date_week, create_date_month, create_date_quarter, create_date_year, modified_by, subscription_duration, access_code_type, pubco_publisher_id, pubco_product_id, deleted]
 	}
 		 
 

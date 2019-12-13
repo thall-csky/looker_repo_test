@@ -41,7 +41,7 @@ view: hub_book {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts, _rsrc, hub_book_key, isbn13]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_book_key, isbn13]
 	}
 		 
 

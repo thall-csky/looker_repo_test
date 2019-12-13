@@ -48,7 +48,7 @@ view: link_product_relationship {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts, _rsrc, link_product_relationship_key, hub_parent_product_key, hub_child_product_key]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_product_relationship_key, hub_parent_product_key, hub_child_product_key]
 	}
 		 
 

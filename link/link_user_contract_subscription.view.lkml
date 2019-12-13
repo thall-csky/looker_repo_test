@@ -55,7 +55,7 @@ view: link_user_contract_subscription {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts, _rsrc, link_user_contract_subscription_key, hub_user_key, hub_contract_key, hub_subscription_key]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_user_contract_subscription_key, hub_user_key, hub_contract_key, hub_subscription_key]
 	}
 		 
 

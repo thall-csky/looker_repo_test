@@ -90,7 +90,7 @@ view: sat_user_login {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts, _rsrc, hub_user_key, hash_diff, event_time, platform, use_type, success, is_minor, note, client_id]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_user_key, hash_diff, event_time_date, event_time_week, event_time_month, event_time_quarter, event_time_year, platform, use_type, success, is_minor, note, client_id]
 	}
 		 
 

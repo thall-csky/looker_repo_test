@@ -97,7 +97,7 @@ view: sat_user_pii {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts, _rsrc, hub_user_key, hash_diff, active, rsrc_timestamp, login, first_name, last_name, email, birth_year, postal_code]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_user_key, hash_diff, active, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, login, first_name, last_name, email, birth_year, postal_code]
 	}
 		 
 

@@ -55,7 +55,7 @@ view: link_el_to_section_mapping {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts, _rsrc, hub_el_to_section_mapping_key, hub_coursesection_key, hub_enterpriselicense_key, link_el_to_section_mapping_key]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_el_to_section_mapping_key, hub_coursesection_key, hub_enterpriselicense_key, link_el_to_section_mapping_key]
 	}
 		 
 
