@@ -57,7 +57,7 @@ explore: hub_contract {
 
 explore: hub_coursesection {
 
-	join: CHILD_link_coursesection_coursesection {
+	join: link_coursesection_coursesection_child {
 		from: link_coursesection_coursesection
 		relationship: one_to_many
 		sql_on: ${hub_coursesection_key} = ${link_coursesection_coursesection.hub_coursesection_key_child} ;;
@@ -65,7 +65,7 @@ explore: hub_coursesection {
 	}
 		
 
-	join: MASTER_link_coursesection_coursesection {
+	join: link_coursesection_coursesection_master {
 		from: link_coursesection_coursesection
 		relationship: one_to_many
 		sql_on: ${hub_coursesection_key} = ${link_coursesection_coursesection.hub_coursesection_key_master} ;;
@@ -245,7 +245,7 @@ explore: hub_product {
 	}
 		
 
-	join: PARENT_link_product_relationship {
+	join: link_product_relationship_parent {
 		from: link_product_relationship
 		relationship: one_to_many
 		sql_on: ${hub_product_key} = ${link_product_relationship.hub_parent_product_key} ;;
@@ -253,7 +253,7 @@ explore: hub_product {
 	}
 		
 
-	join: CHILD_link_product_relationship {
+	join: link_product_relationship_child {
 		from: link_product_relationship
 		relationship: one_to_many
 		sql_on: ${hub_product_key} = ${link_product_relationship.hub_child_product_key} ;;
@@ -561,7 +561,7 @@ explore: link_book_isbn {
 
 explore: link_coursesection_coursesection {
 
-	join: _hub_coursesection {
+	join: hub_coursesection_ {
 		from: hub_coursesection
 		
 		
@@ -569,7 +569,7 @@ explore: link_coursesection_coursesection {
 	}
 		
 
-	join: _hub_coursesection {
+	join: hub_coursesection_ {
 		from: hub_coursesection
 		
 		
@@ -869,7 +869,7 @@ explore: link_product_isbn {
 
 explore: link_product_relationship {
 
-	join: _hub_product {
+	join: hub_product_ {
 		from: hub_product
 		
 		
@@ -877,7 +877,7 @@ explore: link_product_relationship {
 	}
 		
 
-	join: _hub_product {
+	join: hub_product_ {
 		from: hub_product
 		
 		
