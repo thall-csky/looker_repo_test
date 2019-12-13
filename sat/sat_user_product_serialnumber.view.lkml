@@ -3,6 +3,13 @@ view: sat_user_product_serialnumber {
 	sql_table_name: DATAVAULT.SAT_USER_PRODUCT_SERIALNUMBER ;;
 
 
+	dimension: link_user_product_serialnumber_key {
+		primary_key: yes
+		type: string
+		sql: ${TABLE}."LINK_USER_PRODUCT_SERIALNUMBER_KEY" ;;
+	}
+		
+
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -17,7 +24,6 @@ view: sat_user_product_serialnumber {
 		
 
 	dimension: link_user_product_serialnumber_key {
-		primary_key: yes
 		type: string
 		sql: ${TABLE}."LINK_USER_PRODUCT_SERIALNUMBER_KEY" ;;
 	}
@@ -83,7 +89,7 @@ view: sat_user_product_serialnumber {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hash_diff, event_time_date, event_time_week, event_time_month, event_time_quarter, event_time_year, registration_date_date, registration_date_week, registration_date_month, registration_date_quarter, registration_date_year, modified_by, institution_id, region, user_type, order_number]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_user_product_serialnumber_key, hash_diff, event_time_date, event_time_week, event_time_month, event_time_quarter, event_time_year, registration_date_date, registration_date_week, registration_date_month, registration_date_quarter, registration_date_year, modified_by, institution_id, region, user_type, order_number]
 	}
 		 
 

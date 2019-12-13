@@ -3,6 +3,13 @@ view: link_user_subscription_product {
 	sql_table_name: DATAVAULT.LINK_USER_SUBSCRIPTION_PRODUCT ;;
 
 
+	dimension: link_user_subscription_product_key {
+		primary_key: yes
+		type: string
+		sql: ${TABLE}."LINK_USER_SUBSCRIPTION_PRODUCT_KEY" ;;
+	}
+		
+
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -17,7 +24,6 @@ view: link_user_subscription_product {
 		
 
 	dimension: link_user_subscription_product_key {
-		primary_key: yes
 		type: string
 		sql: ${TABLE}."LINK_USER_SUBSCRIPTION_PRODUCT_KEY" ;;
 	}
@@ -51,7 +57,7 @@ view: link_user_subscription_product {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_user_key, hub_subscription_key, hub_product_key]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_user_subscription_product_key, hub_user_key, hub_subscription_key, hub_product_key]
 	}
 		 
 

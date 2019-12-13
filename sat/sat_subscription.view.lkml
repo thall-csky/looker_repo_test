@@ -3,6 +3,13 @@ view: sat_subscription {
 	sql_table_name: DATAVAULT.SAT_SUBSCRIPTION ;;
 
 
+	dimension: link_user_contract_key_hash_diff {
+		primary_key: yes
+		type: string
+		sql: ${TABLE}."LINK_USER_CONTRACT_KEY", ' ', ${TABLE}."HASH_DIFF" ;;
+	}
+		
+
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -17,14 +24,12 @@ view: sat_subscription {
 		
 
 	dimension: link_user_contract_key {
-		primary_key: yes
 		type: string
 		sql: ${TABLE}."LINK_USER_CONTRACT_KEY" ;;
 	}
 		
 
 	dimension: hash_diff {
-		primary_key: yes
 		type: string
 		sql: ${TABLE}."HASH_DIFF" ;;
 	}
@@ -160,7 +165,7 @@ view: sat_subscription {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, src_environment, src_platform, subscription_state, start_timestamp_date, start_timestamp_week, start_timestamp_month, start_timestamp_quarter, start_timestamp_year, end_timestamp_date, end_timestamp_week, end_timestamp_month, end_timestamp_quarter, end_timestamp_year, is_latest_state, subscription_id, available_until_date, available_until_week, available_until_month, available_until_quarter, available_until_year, plan_id, duration, placed_time_date, placed_time_week, placed_time_month, placed_time_quarter, placed_time_year, cancelled_time_date, cancelled_time_week, cancelled_time_month, cancelled_time_quarter, cancelled_time_year, cancellation_reason, payment_source_type, payment_source_id, payment_source_guid, payment_source_line, item_id]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_user_contract_key, hash_diff, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, src_environment, src_platform, subscription_state, start_timestamp_date, start_timestamp_week, start_timestamp_month, start_timestamp_quarter, start_timestamp_year, end_timestamp_date, end_timestamp_week, end_timestamp_month, end_timestamp_quarter, end_timestamp_year, is_latest_state, subscription_id, available_until_date, available_until_week, available_until_month, available_until_quarter, available_until_year, plan_id, duration, placed_time_date, placed_time_week, placed_time_month, placed_time_quarter, placed_time_year, cancelled_time_date, cancelled_time_week, cancelled_time_month, cancelled_time_quarter, cancelled_time_year, cancellation_reason, payment_source_type, payment_source_id, payment_source_guid, payment_source_line, item_id]
 	}
 		 
 

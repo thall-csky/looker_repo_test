@@ -3,6 +3,13 @@ view: link_book_isbn {
 	sql_table_name: DATAVAULT.LINK_BOOK_ISBN ;;
 
 
+	dimension: link_book_isbn_key {
+		primary_key: yes
+		type: string
+		sql: ${TABLE}."LINK_BOOK_ISBN_KEY" ;;
+	}
+		
+
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -17,7 +24,6 @@ view: link_book_isbn {
 		
 
 	dimension: link_book_isbn_key {
-		primary_key: yes
 		type: string
 		sql: ${TABLE}."LINK_BOOK_ISBN_KEY" ;;
 	}
@@ -45,7 +51,7 @@ view: link_book_isbn {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_isbn_key, hub_book_key]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_book_isbn_key, hub_isbn_key, hub_book_key]
 	}
 		 
 

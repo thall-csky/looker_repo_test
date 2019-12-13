@@ -3,6 +3,13 @@ view: link_user_product_contract {
 	sql_table_name: DATAVAULT.LINK_USER_PRODUCT_CONTRACT ;;
 
 
+	dimension: link_user_product_contract_key {
+		primary_key: yes
+		type: string
+		sql: ${TABLE}."LINK_USER_PRODUCT_CONTRACT_KEY" ;;
+	}
+		
+
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -17,7 +24,6 @@ view: link_user_product_contract {
 		
 
 	dimension: link_user_product_contract_key {
-		primary_key: yes
 		type: string
 		sql: ${TABLE}."LINK_USER_PRODUCT_CONTRACT_KEY" ;;
 	}
@@ -51,7 +57,7 @@ view: link_user_product_contract {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_user_key, hub_product_key, hub_contract_key]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_user_product_contract_key, hub_user_key, hub_product_key, hub_contract_key]
 	}
 		 
 

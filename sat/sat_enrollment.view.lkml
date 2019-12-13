@@ -3,6 +3,13 @@ view: sat_enrollment {
 	sql_table_name: DATAVAULT.SAT_ENROLLMENT ;;
 
 
+	dimension: link_user_coursesection_key__ldts {
+		primary_key: yes
+		type: string
+		sql: ${TABLE}."_LDTS", ' ', ${TABLE}."LINK_USER_COURSESECTION_KEY" ;;
+	}
+		
+
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -17,7 +24,6 @@ view: sat_enrollment {
 		
 
 	dimension: link_user_coursesection_key {
-		primary_key: yes
 		type: string
 		sql: ${TABLE}."LINK_USER_COURSESECTION_KEY" ;;
 	}
@@ -168,7 +174,7 @@ view: sat_enrollment {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hash_diff, is_latest_state, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, src_platform, src_environment, access_role, self_study_isbn13, enrollment_date_date, enrollment_date_week, enrollment_date_month, enrollment_date_quarter, enrollment_date_year, paid_in_full, order_number, payment_code, grace_end_date_date, grace_end_date_week, grace_end_date_month, grace_end_date_quarter, grace_end_date_year, transferred, opt_out_institution_purchase, modified_by, access_code_swap, access_code_isbn13, access_code_price, course_isbn_price, billing_type, payment_isbn13, deleted]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_user_coursesection_key, hash_diff, is_latest_state, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, src_platform, src_environment, access_role, self_study_isbn13, enrollment_date_date, enrollment_date_week, enrollment_date_month, enrollment_date_quarter, enrollment_date_year, paid_in_full, order_number, payment_code, grace_end_date_date, grace_end_date_week, grace_end_date_month, grace_end_date_quarter, grace_end_date_year, transferred, opt_out_institution_purchase, modified_by, access_code_swap, access_code_isbn13, access_code_price, course_isbn_price, billing_type, payment_isbn13, deleted]
 	}
 		 
 

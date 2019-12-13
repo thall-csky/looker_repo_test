@@ -3,6 +3,13 @@ view: sat_sap_order {
 	sql_table_name: DATAVAULT.SAT_SAP_ORDER ;;
 
 
+	dimension: link_user_order_key_hash_diff {
+		primary_key: yes
+		type: string
+		sql: ${TABLE}."LINK_USER_ORDER_KEY", ' ', ${TABLE}."HASH_DIFF" ;;
+	}
+		
+
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -17,14 +24,12 @@ view: sat_sap_order {
 		
 
 	dimension: link_user_order_key {
-		primary_key: yes
 		type: string
 		sql: ${TABLE}."LINK_USER_ORDER_KEY" ;;
 	}
 		
 
 	dimension: hash_diff {
-		primary_key: yes
 		type: string
 		sql: ${TABLE}."HASH_DIFF" ;;
 	}
@@ -101,7 +106,7 @@ view: sat_sap_order {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, is_latest_state, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, internal, currency_code, order_source, order_taken_by, total_amount, po_number, processed_method, store_id]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_user_order_key, hash_diff, is_latest_state, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, internal, currency_code, order_source, order_taken_by, total_amount, po_number, processed_method, store_id]
 	}
 		 
 

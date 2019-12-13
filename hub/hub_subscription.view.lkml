@@ -3,6 +3,13 @@ view: hub_subscription {
 	sql_table_name: DATAVAULT.HUB_SUBSCRIPTION ;;
 
 
+	dimension: hub_subscription_key {
+		primary_key: yes
+		type: string
+		sql: ${TABLE}."HUB_SUBSCRIPTION_KEY" ;;
+	}
+		
+
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -17,7 +24,6 @@ view: hub_subscription {
 		
 
 	dimension: hub_subscription_key {
-		primary_key: yes
 		type: string
 		sql: ${TABLE}."HUB_SUBSCRIPTION_KEY" ;;
 	}
@@ -39,7 +45,7 @@ view: hub_subscription {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, subscription_id]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_subscription_key, subscription_id]
 	}
 		 
 

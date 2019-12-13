@@ -3,6 +3,13 @@ view: hub_coursesection {
 	sql_table_name: DATAVAULT.HUB_COURSESECTION ;;
 
 
+	dimension: hub_coursesection_key {
+		primary_key: yes
+		type: string
+		sql: ${TABLE}."HUB_COURSESECTION_KEY" ;;
+	}
+		
+
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -17,7 +24,6 @@ view: hub_coursesection {
 		
 
 	dimension: hub_coursesection_key {
-		primary_key: yes
 		type: string
 		sql: ${TABLE}."HUB_COURSESECTION_KEY" ;;
 	}
@@ -51,7 +57,7 @@ view: hub_coursesection {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, context_id, environment, platform]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_coursesection_key, context_id, environment, platform]
 	}
 		 
 

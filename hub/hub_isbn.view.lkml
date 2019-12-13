@@ -3,6 +3,13 @@ view: hub_isbn {
 	sql_table_name: DATAVAULT.HUB_ISBN ;;
 
 
+	dimension: hub_isbn_key {
+		primary_key: yes
+		type: string
+		sql: ${TABLE}."HUB_ISBN_KEY" ;;
+	}
+		
+
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -17,7 +24,6 @@ view: hub_isbn {
 		
 
 	dimension: hub_isbn_key {
-		primary_key: yes
 		type: string
 		sql: ${TABLE}."HUB_ISBN_KEY" ;;
 	}
@@ -39,7 +45,7 @@ view: hub_isbn {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, isbn13]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_isbn_key, isbn13]
 	}
 		 
 

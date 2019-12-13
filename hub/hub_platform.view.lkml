@@ -3,6 +3,13 @@ view: hub_platform {
 	sql_table_name: DATAVAULT.HUB_PLATFORM ;;
 
 
+	dimension: hub_platform_key {
+		primary_key: yes
+		type: string
+		sql: ${TABLE}."HUB_PLATFORM_KEY" ;;
+	}
+		
+
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -17,7 +24,6 @@ view: hub_platform {
 		
 
 	dimension: hub_platform_key {
-		primary_key: yes
 		type: string
 		sql: ${TABLE}."HUB_PLATFORM_KEY" ;;
 	}
@@ -45,7 +51,7 @@ view: hub_platform {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, platform, environment]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_platform_key, platform, environment]
 	}
 		 
 

@@ -3,6 +3,13 @@ view: hub_contract {
 	sql_table_name: DATAVAULT.HUB_CONTRACT ;;
 
 
+	dimension: hub_contract_key {
+		primary_key: yes
+		type: string
+		sql: ${TABLE}."HUB_CONTRACT_KEY" ;;
+	}
+		
+
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -17,7 +24,6 @@ view: hub_contract {
 		
 
 	dimension: hub_contract_key {
-		primary_key: yes
 		type: string
 		sql: ${TABLE}."HUB_CONTRACT_KEY" ;;
 	}
@@ -39,7 +45,7 @@ view: hub_contract {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, contract_id]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_contract_key, contract_id]
 	}
 		 
 

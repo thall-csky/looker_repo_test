@@ -3,6 +3,13 @@ view: sat_serialnumber {
 	sql_table_name: DATAVAULT.SAT_SERIALNUMBER ;;
 
 
+	dimension: hub_serialnumber_key__ldts {
+		primary_key: yes
+		type: string
+		sql: ${TABLE}."_LDTS", ' ', ${TABLE}."HUB_SERIALNUMBER_KEY" ;;
+	}
+		
+
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -17,7 +24,6 @@ view: sat_serialnumber {
 		
 
 	dimension: hub_serialnumber_key {
-		primary_key: yes
 		type: string
 		sql: ${TABLE}."HUB_SERIALNUMBER_KEY" ;;
 	}
@@ -94,7 +100,7 @@ view: sat_serialnumber {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hash_diff, is_latest_state, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, src_platform, src_environment, subscription_length_in_days, platform, code_type, referring_isbn, revoked]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_serialnumber_key, hash_diff, is_latest_state, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, src_platform, src_environment, subscription_length_in_days, platform, code_type, referring_isbn, revoked]
 	}
 		 
 

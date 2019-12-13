@@ -3,6 +3,13 @@ view: sat_coursesection {
 	sql_table_name: DATAVAULT.SAT_COURSESECTION ;;
 
 
+	dimension: hub_coursesection_key__ldts {
+		primary_key: yes
+		type: string
+		sql: ${TABLE}."_LDTS", ' ', ${TABLE}."HUB_COURSESECTION_KEY" ;;
+	}
+		
+
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -17,7 +24,6 @@ view: sat_coursesection {
 		
 
 	dimension: hub_coursesection_key {
-		primary_key: yes
 		type: string
 		sql: ${TABLE}."HUB_COURSESECTION_KEY" ;;
 	}
@@ -256,7 +262,7 @@ view: sat_coursesection {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hash_diff, is_latest_state, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, course_key, course_name, created_on_date, created_on_week, created_on_month, created_on_quarter, created_on_year, begin_date_date, begin_date_week, begin_date_month, begin_date_quarter, begin_date_year, end_date_date, end_date_week, end_date_month, end_date_quarter, end_date_year, note, institution_id, institution_id_override, deleted, grace_period_end_date_date, grace_period_end_date_week, grace_period_end_date_month, grace_period_end_date_quarter, grace_period_end_date_year, grace_period_end_date_override_date, grace_period_end_date_override_week, grace_period_end_date_override_month, grace_period_end_date_override_quarter, grace_period_end_date_override_year, course_created_by_guid, is_gateway_course, is_partner_lms, discipline, course_platform, section, course_master, master_context_id, course_cgi, from_course_cgi, timezone, billing_type, iac_isbn, multi_term_isbn13, core_text_isbn13, section_product_type, cu_isbn13, cu_enabled, is_demo, opt_out_enabled, opt_out_days, opt_out_end_date_date, opt_out_end_date_week, opt_out_end_date_month, opt_out_end_date_quarter, opt_out_end_date_year]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_coursesection_key, hash_diff, is_latest_state, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, course_key, course_name, created_on_date, created_on_week, created_on_month, created_on_quarter, created_on_year, begin_date_date, begin_date_week, begin_date_month, begin_date_quarter, begin_date_year, end_date_date, end_date_week, end_date_month, end_date_quarter, end_date_year, note, institution_id, institution_id_override, deleted, grace_period_end_date_date, grace_period_end_date_week, grace_period_end_date_month, grace_period_end_date_quarter, grace_period_end_date_year, grace_period_end_date_override_date, grace_period_end_date_override_week, grace_period_end_date_override_month, grace_period_end_date_override_quarter, grace_period_end_date_override_year, course_created_by_guid, is_gateway_course, is_partner_lms, discipline, course_platform, section, course_master, master_context_id, course_cgi, from_course_cgi, timezone, billing_type, iac_isbn, multi_term_isbn13, core_text_isbn13, section_product_type, cu_isbn13, cu_enabled, is_demo, opt_out_enabled, opt_out_days, opt_out_end_date_date, opt_out_end_date_week, opt_out_end_date_month, opt_out_end_date_quarter, opt_out_end_date_year]
 	}
 		 
 

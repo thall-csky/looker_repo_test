@@ -3,6 +3,13 @@ view: sat_user_login {
 	sql_table_name: DATAVAULT.SAT_USER_LOGIN ;;
 
 
+	dimension: hub_user_key__ldts {
+		primary_key: yes
+		type: string
+		sql: ${TABLE}."_LDTS", ' ', ${TABLE}."HUB_USER_KEY" ;;
+	}
+		
+
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -17,7 +24,6 @@ view: sat_user_login {
 		
 
 	dimension: hub_user_key {
-		primary_key: yes
 		type: string
 		sql: ${TABLE}."HUB_USER_KEY" ;;
 	}
@@ -82,7 +88,7 @@ view: sat_user_login {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hash_diff, event_time_date, event_time_week, event_time_month, event_time_quarter, event_time_year, platform, use_type, success, is_minor, note, client_id]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_user_key, hash_diff, event_time_date, event_time_week, event_time_month, event_time_quarter, event_time_year, platform, use_type, success, is_minor, note, client_id]
 	}
 		 
 
