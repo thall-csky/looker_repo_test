@@ -23,12 +23,6 @@ view: link_user_institution {
 	}
 		
 
-	dimension: link_user_institution_key {
-		type: string
-		sql: ${TABLE}."LINK_USER_INSTITUTION_KEY" ;;
-	}
-		
-
 	dimension: hub_user_key {
 		type: string
 		sql: ${TABLE}."HUB_USER_KEY" ;;
@@ -51,7 +45,7 @@ view: link_user_institution {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_user_institution_key, hub_user_key, hub_institution_key]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_user_key, hub_institution_key]
 	}
 		 
 

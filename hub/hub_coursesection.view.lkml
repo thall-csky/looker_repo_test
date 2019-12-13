@@ -23,12 +23,6 @@ view: hub_coursesection {
 	}
 		
 
-	dimension: hub_coursesection_key {
-		type: string
-		sql: ${TABLE}."HUB_COURSESECTION_KEY" ;;
-	}
-		
-
 	dimension: context_id {
 		type: string
 		sql: ${TABLE}."CONTEXT_ID" ;;
@@ -57,7 +51,7 @@ view: hub_coursesection {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_coursesection_key, context_id, environment, platform]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, context_id, environment, platform]
 	}
 		 
 

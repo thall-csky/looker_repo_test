@@ -23,12 +23,6 @@ view: hub_product {
 	}
 		
 
-	dimension: hub_product_key {
-		type: string
-		sql: ${TABLE}."HUB_PRODUCT_KEY" ;;
-	}
-		
-
 	dimension: pid {
 		type: string
 		sql: ${TABLE}."PID" ;;
@@ -45,7 +39,7 @@ view: hub_product {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_product_key, pid]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, pid]
 	}
 		 
 

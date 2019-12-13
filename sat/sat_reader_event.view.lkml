@@ -23,18 +23,6 @@ view: sat_reader_event {
 	}
 		
 
-	dimension: link_user_book_key {
-		type: string
-		sql: ${TABLE}."LINK_USER_BOOK_KEY" ;;
-	}
-		
-
-	dimension: hash_diff {
-		type: string
-		sql: ${TABLE}."HASH_DIFF" ;;
-	}
-		
-
 	dimension: event_source {
 		type: string
 		sql: ${TABLE}."EVENT_SOURCE" ;;
@@ -82,7 +70,7 @@ view: sat_reader_event {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_user_book_key, hash_diff, event_source, event_id, event_session_id, event_category, event_action, event_time_date, event_time_week, event_time_month, event_time_quarter, event_time_year]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, event_source, event_id, event_session_id, event_category, event_action, event_time_date, event_time_week, event_time_month, event_time_quarter, event_time_year]
 	}
 		 
 

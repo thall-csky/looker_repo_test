@@ -23,12 +23,6 @@ view: hub_order {
 	}
 		
 
-	dimension: hub_order_key {
-		type: string
-		sql: ${TABLE}."HUB_ORDER_KEY" ;;
-	}
-		
-
 	dimension: order_id {
 		type: string
 		sql: ${TABLE}."ORDER_ID" ;;
@@ -45,7 +39,7 @@ view: hub_order {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_order_key, order_id]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, order_id]
 	}
 		 
 

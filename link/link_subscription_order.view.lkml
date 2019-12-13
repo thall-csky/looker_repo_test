@@ -23,12 +23,6 @@ view: link_subscription_order {
 	}
 		
 
-	dimension: link_subscription_order_key {
-		type: string
-		sql: ${TABLE}."LINK_SUBSCRIPTION_ORDER_KEY" ;;
-	}
-		
-
 	dimension: hub_subscription_key {
 		type: string
 		sql: ${TABLE}."HUB_SUBSCRIPTION_KEY" ;;
@@ -51,7 +45,7 @@ view: link_subscription_order {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_subscription_order_key, hub_subscription_key, hub_order_key]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_subscription_key, hub_order_key]
 	}
 		 
 

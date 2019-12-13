@@ -23,12 +23,6 @@ view: link_coursesection_institution {
 	}
 		
 
-	dimension: link_coursesection_institution_key {
-		type: string
-		sql: ${TABLE}."LINK_COURSESECTION_INSTITUTION_KEY" ;;
-	}
-		
-
 	dimension: hub_institution_key {
 		type: string
 		sql: ${TABLE}."HUB_INSTITUTION_KEY" ;;
@@ -51,7 +45,7 @@ view: link_coursesection_institution {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_coursesection_institution_key, hub_institution_key, hub_coursesection_key]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_institution_key, hub_coursesection_key]
 	}
 		 
 

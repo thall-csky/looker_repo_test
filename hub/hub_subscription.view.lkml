@@ -23,12 +23,6 @@ view: hub_subscription {
 	}
 		
 
-	dimension: hub_subscription_key {
-		type: string
-		sql: ${TABLE}."HUB_SUBSCRIPTION_KEY" ;;
-	}
-		
-
 	dimension: subscription_id {
 		type: string
 		sql: ${TABLE}."SUBSCRIPTION_ID" ;;
@@ -45,7 +39,7 @@ view: hub_subscription {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_subscription_key, subscription_id]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, subscription_id]
 	}
 		 
 

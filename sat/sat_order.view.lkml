@@ -23,18 +23,6 @@ view: sat_order {
 	}
 		
 
-	dimension: link_user_contract_key {
-		type: string
-		sql: ${TABLE}."LINK_USER_CONTRACT_KEY" ;;
-	}
-		
-
-	dimension: hash_diff {
-		type: string
-		sql: ${TABLE}."HASH_DIFF" ;;
-	}
-		
-
 	dimension_group: rsrc_timestamp {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
@@ -113,7 +101,7 @@ view: sat_order {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_user_contract_key, hash_diff, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, order_id, internal, currency_code, order_date_date, order_date_week, order_date_month, order_date_quarter, order_date_year, order_source, order_taken_by, total_amount, po_number, processed_method, store_id]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, order_id, internal, currency_code, order_date_date, order_date_week, order_date_month, order_date_quarter, order_date_year, order_source, order_taken_by, total_amount, po_number, processed_method, store_id]
 	}
 		 
 

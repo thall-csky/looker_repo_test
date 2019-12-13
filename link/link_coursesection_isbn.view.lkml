@@ -23,12 +23,6 @@ view: link_coursesection_isbn {
 	}
 		
 
-	dimension: link_coursesection_isbn_key {
-		type: string
-		sql: ${TABLE}."LINK_COURSESECTION_ISBN_KEY" ;;
-	}
-		
-
 	dimension: hub_isbn_key {
 		type: string
 		sql: ${TABLE}."HUB_ISBN_KEY" ;;
@@ -51,7 +45,7 @@ view: link_coursesection_isbn {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_coursesection_isbn_key, hub_isbn_key, hub_coursesection_key]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_isbn_key, hub_coursesection_key]
 	}
 		 
 

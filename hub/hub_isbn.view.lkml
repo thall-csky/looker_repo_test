@@ -23,12 +23,6 @@ view: hub_isbn {
 	}
 		
 
-	dimension: hub_isbn_key {
-		type: string
-		sql: ${TABLE}."HUB_ISBN_KEY" ;;
-	}
-		
-
 	dimension: isbn13 {
 		type: string
 		sql: ${TABLE}."ISBN13" ;;
@@ -45,7 +39,7 @@ view: hub_isbn {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_isbn_key, isbn13]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, isbn13]
 	}
 		 
 

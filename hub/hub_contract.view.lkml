@@ -23,12 +23,6 @@ view: hub_contract {
 	}
 		
 
-	dimension: hub_contract_key {
-		type: string
-		sql: ${TABLE}."HUB_CONTRACT_KEY" ;;
-	}
-		
-
 	dimension: contract_id {
 		type: string
 		sql: ${TABLE}."CONTRACT_ID" ;;
@@ -45,7 +39,7 @@ view: hub_contract {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_contract_key, contract_id]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, contract_id]
 	}
 		 
 

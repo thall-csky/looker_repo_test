@@ -23,12 +23,6 @@ view: link_coursesection_coursesection {
 	}
 		
 
-	dimension: link_coursesection_coursesection_key {
-		type: string
-		sql: ${TABLE}."LINK_COURSESECTION_COURSESECTION_KEY" ;;
-	}
-		
-
 	dimension: hub_coursesection_key_child {
 		type: string
 		sql: ${TABLE}."HUB_COURSESECTION_KEY_CHILD" ;;
@@ -51,7 +45,7 @@ view: link_coursesection_coursesection {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_coursesection_coursesection_key, hub_coursesection_key_child, hub_coursesection_key_master]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_coursesection_key_child, hub_coursesection_key_master]
 	}
 		 
 

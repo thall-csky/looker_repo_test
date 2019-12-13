@@ -23,12 +23,6 @@ view: link_product_isbn {
 	}
 		
 
-	dimension: link_product_isbn_key {
-		type: string
-		sql: ${TABLE}."LINK_PRODUCT_ISBN_KEY" ;;
-	}
-		
-
 	dimension: hub_product_key {
 		type: string
 		sql: ${TABLE}."HUB_PRODUCT_KEY" ;;
@@ -51,7 +45,7 @@ view: link_product_isbn {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, link_product_isbn_key, hub_product_key, hub_isbn_key]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_product_key, hub_isbn_key]
 	}
 		 
 

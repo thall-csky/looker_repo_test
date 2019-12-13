@@ -23,12 +23,6 @@ view: hub_serialnumber {
 	}
 		
 
-	dimension: hub_serialnumber_key {
-		type: string
-		sql: ${TABLE}."HUB_SERIALNUMBER_KEY" ;;
-	}
-		
-
 	dimension: serial_number {
 		type: string
 		sql: ${TABLE}."SERIAL_NUMBER" ;;
@@ -45,7 +39,7 @@ view: hub_serialnumber {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_serialnumber_key, serial_number]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, serial_number]
 	}
 		 
 

@@ -6,26 +6,13 @@ view: sat_user_pii {
 	dimension: hub_user_key__ldts {
 		primary_key: yes
 		type: string
-		sql: ${TABLE}."_LDTS", ' ', ${TABLE}."HUB_USER_KEY" ;;
-	}
-		
-
-	dimension_group: _ldts {
-		timeframes: [raw, time, date, week, month, quarter, year]
-		type: time
-		sql: ${TABLE}."_LDTS" ;;
+		sql: ${TABLE}."HUB_USER_KEY", ' ', ${TABLE}."_LDTS" ;;
 	}
 		
 
 	dimension: _rsrc {
 		type: string
 		sql: ${TABLE}."_RSRC" ;;
-	}
-		
-
-	dimension: hub_user_key {
-		type: string
-		sql: ${TABLE}."HUB_USER_KEY" ;;
 	}
 		
 
@@ -94,7 +81,7 @@ view: sat_user_pii {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_user_key, hash_diff, active, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, login, first_name, last_name, email, birth_year, postal_code]
+		fields: [_rsrc, hash_diff, active, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, login, first_name, last_name, email, birth_year, postal_code]
 	}
 		 
 

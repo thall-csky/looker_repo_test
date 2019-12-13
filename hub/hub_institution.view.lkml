@@ -23,12 +23,6 @@ view: hub_institution {
 	}
 		
 
-	dimension: hub_institution_key {
-		type: string
-		sql: ${TABLE}."HUB_INSTITUTION_KEY" ;;
-	}
-		
-
 	dimension: institution_id {
 		type: string
 		sql: ${TABLE}."INSTITUTION_ID" ;;
@@ -45,7 +39,7 @@ view: hub_institution {
 
 
 	set: all_dims_but_primary {
-		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, hub_institution_key, institution_id]
+		fields: [_ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, institution_id]
 	}
 		 
 
