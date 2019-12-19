@@ -373,15 +373,6 @@ explore: hub_book {
 	}
 		
 
-	join: link_product_relationship_parent {
-		from: link_product_relationship
-		relationship: one_to_many
-		required_joins: [link_book_isbn, hub_isbn, link_product_isbn, hub_product]
-		sql_on: ${hub_product_parent.hub_parent_product_key} = ${link_product_relationship_parent.hub_product_key} ;;
-		fields: []
-	}
-		
-
 	join: link_subscription_order {
 		from: link_subscription_order
 		relationship: one_to_many
@@ -399,15 +390,6 @@ explore: hub_book {
 	}
 		
 
-	join: link_coursesection_coursesection_master {
-		from: link_coursesection_coursesection
-		relationship: one_to_many
-		required_joins: [link_book_isbn, hub_isbn, link_coursesection_isbn, hub_coursesection]
-		sql_on: ${hub_coursesection_master.hub_coursesection_key_master} = ${link_coursesection_coursesection_master.hub_coursesection_key} ;;
-		fields: []
-	}
-		
-
 	join: sat_serialnumber {
 		from: sat_serialnumber
 		relationship: one_to_many
@@ -421,14 +403,6 @@ explore: hub_book {
 		relationship: one_to_many
 		required_joins: [link_book_isbn, hub_isbn, link_product_isbn, hub_product]
 		sql_on: ${hub_product.hub_product_key} = ${sat_product_attr.hub_product_key} ;;
-	}
-		
-
-	join: sat_product_relationship {
-		from: sat_product_relationship
-		relationship: one_to_many
-		required_joins: [link_book_isbn, hub_isbn, link_product_isbn, hub_product, link_product_relationship]
-		sql_on: ${link_product_relationship.link_product_relationship_key} = ${sat_product_relationship.link_product_relationship_key} ;;
 	}
 		
 }
@@ -535,15 +509,6 @@ explore: hub_contract {
 		relationship: one_to_many
 		required_joins: [link_user_product_contract, hub_product]
 		sql_on: ${hub_product.hub_product_key} = ${sat_product.hub_product_key} ;;
-	}
-		
-
-	join: link_product_relationship_parent {
-		from: link_product_relationship
-		relationship: one_to_many
-		required_joins: [link_user_product_contract, hub_product]
-		sql_on: ${hub_product_parent.hub_parent_product_key} = ${link_product_relationship_parent.hub_product_key} ;;
-		fields: []
 	}
 		
 
@@ -730,14 +695,6 @@ explore: hub_contract {
 	}
 		
 
-	join: sat_product_relationship {
-		from: sat_product_relationship
-		relationship: one_to_many
-		required_joins: [link_user_product_contract, hub_product, link_product_relationship]
-		sql_on: ${link_product_relationship.link_product_relationship_key} = ${sat_product_relationship.link_product_relationship_key} ;;
-	}
-		
-
 	join: sat_common_event {
 		from: sat_common_event
 		relationship: one_to_many
@@ -809,8 +766,8 @@ explore: hub_contract {
 	join: link_coursesection_institution {
 		from: link_coursesection_institution
 		relationship: one_to_many
-		required_joins: [link_user_contract_subscription, hub_user, link_user_institution, hub_institution]
-		sql_on: ${hub_institution.hub_institution_key} = ${link_coursesection_institution.hub_institution_key} ;;
+		required_joins: [link_user_contract_subscription, hub_user, link_user_coursesection, hub_coursesection]
+		sql_on: ${hub_coursesection.hub_coursesection_key} = ${link_coursesection_institution.hub_coursesection_key} ;;
 		fields: []
 	}
 		
@@ -820,15 +777,6 @@ explore: hub_contract {
 		relationship: one_to_many
 		required_joins: [link_user_contract_subscription, hub_user, link_user_coursesection, hub_coursesection]
 		sql_on: ${hub_coursesection.hub_coursesection_key} = ${sat_coursesection.hub_coursesection_key} ;;
-	}
-		
-
-	join: link_coursesection_coursesection_master {
-		from: link_coursesection_coursesection
-		relationship: one_to_many
-		required_joins: [link_user_contract_subscription, hub_user, link_user_coursesection, hub_coursesection]
-		sql_on: ${hub_coursesection_master.hub_coursesection_key_master} = ${link_coursesection_coursesection_master.hub_coursesection_key} ;;
-		fields: []
 	}
 		
 
@@ -882,14 +830,6 @@ explore: hub_coursesection {
 		from: sat_coursesection
 		relationship: one_to_many
 		sql_on: ${hub_coursesection.hub_coursesection_key} = ${sat_coursesection.hub_coursesection_key} ;;
-	}
-		
-
-	join: link_coursesection_coursesection_master {
-		from: link_coursesection_coursesection
-		relationship: one_to_many
-		sql_on: ${hub_coursesection_master.hub_coursesection_key_master} = ${link_coursesection_coursesection_master.hub_coursesection_key} ;;
-		fields: []
 	}
 		
 
@@ -1240,15 +1180,6 @@ explore: hub_coursesection {
 	}
 		
 
-	join: link_product_relationship_parent {
-		from: link_product_relationship
-		relationship: one_to_many
-		required_joins: [link_user_coursesection, hub_user, link_user_product_contract, hub_product]
-		sql_on: ${hub_product_parent.hub_parent_product_key} = ${link_product_relationship_parent.hub_product_key} ;;
-		fields: []
-	}
-		
-
 	join: link_subscription_order {
 		from: link_subscription_order
 		relationship: one_to_many
@@ -1271,14 +1202,6 @@ explore: hub_coursesection {
 		relationship: one_to_many
 		required_joins: [link_user_coursesection, hub_user, link_user_product_contract, hub_product]
 		sql_on: ${hub_product.hub_product_key} = ${sat_product_attr.hub_product_key} ;;
-	}
-		
-
-	join: sat_product_relationship {
-		from: sat_product_relationship
-		relationship: one_to_many
-		required_joins: [link_user_coursesection, hub_user, link_user_product_contract, hub_product, link_product_relationship]
-		sql_on: ${link_product_relationship.link_product_relationship_key} = ${sat_product_relationship.link_product_relationship_key} ;;
 	}
 		
 }
@@ -1357,15 +1280,6 @@ explore: hub_institution {
 		relationship: one_to_many
 		required_joins: [link_coursesection_institution, hub_coursesection]
 		sql_on: ${hub_coursesection.hub_coursesection_key} = ${sat_coursesection.hub_coursesection_key} ;;
-	}
-		
-
-	join: link_coursesection_coursesection_master {
-		from: link_coursesection_coursesection
-		relationship: one_to_many
-		required_joins: [link_coursesection_institution, hub_coursesection]
-		sql_on: ${hub_coursesection_master.hub_coursesection_key_master} = ${link_coursesection_coursesection_master.hub_coursesection_key} ;;
-		fields: []
 	}
 		
 
@@ -1606,8 +1520,8 @@ explore: hub_institution {
 
 	join: hub_product {
 		from: hub_product
-		required_joins: [link_user_institution, hub_user, link_user_product]
-		foreign_key: link_user_product.hub_product_key
+		required_joins: [link_user_institution, hub_user, link_user_product_contract]
+		foreign_key: link_user_product_contract.hub_product_key
 	}
 		
 
@@ -1654,17 +1568,8 @@ explore: hub_institution {
 	join: sat_product {
 		from: sat_product
 		relationship: one_to_many
-		required_joins: [link_user_institution, hub_user, link_user_product, hub_product]
+		required_joins: [link_user_institution, hub_user, link_user_product_contract, hub_product]
 		sql_on: ${hub_product.hub_product_key} = ${sat_product.hub_product_key} ;;
-	}
-		
-
-	join: link_product_relationship_parent {
-		from: link_product_relationship
-		relationship: one_to_many
-		required_joins: [link_user_institution, hub_user, link_user_product, hub_product]
-		sql_on: ${hub_product_parent.hub_parent_product_key} = ${link_product_relationship_parent.hub_product_key} ;;
-		fields: []
 	}
 		
 
@@ -1688,8 +1593,8 @@ explore: hub_institution {
 	join: link_product_isbn {
 		from: link_product_isbn
 		relationship: one_to_many
-		required_joins: [link_user_institution, hub_user, link_user_product, hub_product]
-		sql_on: ${hub_product.hub_product_key} = ${link_product_isbn.hub_product_key} ;;
+		required_joins: [link_coursesection_institution, hub_coursesection, link_coursesection_isbn, hub_isbn]
+		sql_on: ${hub_isbn.hub_isbn_key} = ${link_product_isbn.hub_isbn_key} ;;
 		fields: []
 	}
 		
@@ -1706,16 +1611,8 @@ explore: hub_institution {
 	join: sat_product_attr {
 		from: sat_product_attr
 		relationship: one_to_many
-		required_joins: [link_user_institution, hub_user, link_user_product, hub_product]
+		required_joins: [link_user_institution, hub_user, link_user_product_contract, hub_product]
 		sql_on: ${hub_product.hub_product_key} = ${sat_product_attr.hub_product_key} ;;
-	}
-		
-
-	join: sat_product_relationship {
-		from: sat_product_relationship
-		relationship: one_to_many
-		required_joins: [link_user_institution, hub_user, link_user_product, hub_product, link_product_relationship]
-		sql_on: ${link_product_relationship.link_product_relationship_key} = ${sat_product_relationship.link_product_relationship_key} ;;
 	}
 		
 }
@@ -1794,29 +1691,11 @@ explore: hub_isbn {
 	}
 		
 
-	join: link_product_relationship_parent {
-		from: link_product_relationship
-		relationship: one_to_many
-		required_joins: [link_product_isbn, hub_product]
-		sql_on: ${hub_product_parent.hub_parent_product_key} = ${link_product_relationship_parent.hub_product_key} ;;
-		fields: []
-	}
-		
-
 	join: sat_coursesection {
 		from: sat_coursesection
 		relationship: one_to_many
 		required_joins: [link_coursesection_isbn, hub_coursesection]
 		sql_on: ${hub_coursesection.hub_coursesection_key} = ${sat_coursesection.hub_coursesection_key} ;;
-	}
-		
-
-	join: link_coursesection_coursesection_master {
-		from: link_coursesection_coursesection
-		relationship: one_to_many
-		required_joins: [link_coursesection_isbn, hub_coursesection]
-		sql_on: ${hub_coursesection_master.hub_coursesection_key_master} = ${link_coursesection_coursesection_master.hub_coursesection_key} ;;
-		fields: []
 	}
 		
 
@@ -1875,8 +1754,8 @@ explore: hub_isbn {
 
 	join: hub_user {
 		from: hub_user
-		required_joins: [link_coursesection_isbn, hub_coursesection, link_user_coursesection]
-		foreign_key: link_user_coursesection.hub_user_key
+		required_joins: [link_book_isbn, hub_book, link_user_book]
+		foreign_key: link_user_book.hub_user_key
 	}
 		
 
@@ -1892,14 +1771,6 @@ explore: hub_isbn {
 		from: hub_contract
 		required_joins: [link_product_isbn, hub_product, link_user_product_contract]
 		foreign_key: link_user_product_contract.hub_contract_key
-	}
-		
-
-	join: sat_product_relationship {
-		from: sat_product_relationship
-		relationship: one_to_many
-		required_joins: [link_product_isbn, hub_product, link_product_relationship]
-		sql_on: ${link_product_relationship.link_product_relationship_key} = ${sat_product_relationship.link_product_relationship_key} ;;
 	}
 		
 
@@ -1986,7 +1857,7 @@ explore: hub_isbn {
 	join: sat_user_pii {
 		from: sat_user_pii
 		relationship: one_to_many
-		required_joins: [link_coursesection_isbn, hub_coursesection, link_user_coursesection, hub_user]
+		required_joins: [link_book_isbn, hub_book, link_user_book, hub_user]
 		sql_on: ${hub_user.hub_user_key} = ${sat_user_pii.hub_user_key} ;;
 	}
 		
@@ -1994,7 +1865,7 @@ explore: hub_isbn {
 	join: sat_user_login {
 		from: sat_user_login
 		relationship: one_to_many
-		required_joins: [link_coursesection_isbn, hub_coursesection, link_user_coursesection, hub_user]
+		required_joins: [link_book_isbn, hub_book, link_user_book, hub_user]
 		sql_on: ${hub_user.hub_user_key} = ${sat_user_login.hub_user_key} ;;
 	}
 		
@@ -2002,7 +1873,7 @@ explore: hub_isbn {
 	join: sat_user_marketing {
 		from: sat_user_marketing
 		relationship: one_to_many
-		required_joins: [link_coursesection_isbn, hub_coursesection, link_user_coursesection, hub_user]
+		required_joins: [link_book_isbn, hub_book, link_user_book, hub_user]
 		sql_on: ${hub_user.hub_user_key} = ${sat_user_marketing.hub_user_key} ;;
 	}
 		
@@ -2010,7 +1881,7 @@ explore: hub_isbn {
 	join: sat_user {
 		from: sat_user
 		relationship: one_to_many
-		required_joins: [link_coursesection_isbn, hub_coursesection, link_user_coursesection, hub_user]
+		required_joins: [link_book_isbn, hub_book, link_user_book, hub_user]
 		sql_on: ${hub_user.hub_user_key} = ${sat_user.hub_user_key} ;;
 	}
 		
@@ -2018,7 +1889,7 @@ explore: hub_isbn {
 	join: link_user_platform {
 		from: link_user_platform
 		relationship: one_to_many
-		required_joins: [link_coursesection_isbn, hub_coursesection, link_user_coursesection, hub_user]
+		required_joins: [link_book_isbn, hub_book, link_user_book, hub_user]
 		sql_on: ${hub_user.hub_user_key} = ${link_user_platform.hub_user_key} ;;
 		fields: []
 	}
@@ -2027,7 +1898,7 @@ explore: hub_isbn {
 	join: link_user_order {
 		from: link_user_order
 		relationship: one_to_many
-		required_joins: [link_coursesection_isbn, hub_coursesection, link_user_coursesection, hub_user]
+		required_joins: [link_book_isbn, hub_book, link_user_book, hub_user]
 		sql_on: ${hub_user.hub_user_key} = ${link_user_order.hub_user_key} ;;
 		fields: []
 	}
@@ -2045,7 +1916,7 @@ explore: hub_isbn {
 	join: sat_user_internal {
 		from: sat_user_internal
 		relationship: one_to_many
-		required_joins: [link_coursesection_isbn, hub_coursesection, link_user_coursesection, hub_user]
+		required_joins: [link_book_isbn, hub_book, link_user_book, hub_user]
 		sql_on: ${hub_user.hub_user_key} = ${sat_user_internal.hub_user_key} ;;
 	}
 		
@@ -2053,7 +1924,7 @@ explore: hub_isbn {
 	join: pit_user {
 		from: pit_user
 		relationship: one_to_many
-		required_joins: [link_coursesection_isbn, hub_coursesection, link_user_coursesection, hub_user]
+		required_joins: [link_book_isbn, hub_book, link_user_book, hub_user]
 		sql_on: ${hub_user.hub_user_key} = ${pit_user.hub_user_key} ;;
 	}
 		
@@ -2061,8 +1932,8 @@ explore: hub_isbn {
 	join: link_user_contract {
 		from: link_user_contract
 		relationship: one_to_many
-		required_joins: [link_product_isbn, hub_product, link_user_product_contract, hub_contract]
-		sql_on: ${hub_contract.hub_contract_key} = ${link_user_contract.hub_contract_key} ;;
+		required_joins: [link_book_isbn, hub_book, link_user_book, hub_user]
+		sql_on: ${hub_user.hub_user_key} = ${link_user_contract.hub_user_key} ;;
 		fields: []
 	}
 		
@@ -2084,7 +1955,7 @@ explore: hub_isbn {
 
 	join: hub_platform {
 		from: hub_platform
-		required_joins: [link_coursesection_isbn, hub_coursesection, link_user_coursesection, hub_user, link_user_platform]
+		required_joins: [link_book_isbn, hub_book, link_user_book, hub_user, link_user_platform]
 		foreign_key: link_user_platform.hub_platform_key
 	}
 		
@@ -2092,7 +1963,7 @@ explore: hub_isbn {
 	join: sat_sap_contract {
 		from: sat_sap_contract
 		relationship: one_to_many
-		required_joins: [link_product_isbn, hub_product, link_user_product_contract, hub_contract, link_user_contract]
+		required_joins: [link_book_isbn, hub_book, link_user_book, hub_user, link_user_contract]
 		sql_on: ${link_user_contract.link_user_contract_key} = ${sat_sap_contract.link_user_contract_key} ;;
 	}
 		
@@ -2100,7 +1971,7 @@ explore: hub_isbn {
 	join: sat_subscription {
 		from: sat_subscription
 		relationship: one_to_many
-		required_joins: [link_product_isbn, hub_product, link_user_product_contract, hub_contract, link_user_contract]
+		required_joins: [link_book_isbn, hub_book, link_user_book, hub_user, link_user_contract]
 		sql_on: ${link_user_contract.link_user_contract_key} = ${sat_subscription.link_user_contract_key} ;;
 	}
 		
@@ -2108,7 +1979,7 @@ explore: hub_isbn {
 	join: sat_common_event {
 		from: sat_common_event
 		relationship: one_to_many
-		required_joins: [link_coursesection_isbn, hub_coursesection, link_user_coursesection, hub_user, link_user_platform]
+		required_joins: [link_book_isbn, hub_book, link_user_book, hub_user, link_user_platform]
 		sql_on: ${link_user_platform.link_user_platform_key} = ${sat_common_event.link_user_platform_key} ;;
 	}
 		
@@ -2124,7 +1995,7 @@ explore: hub_isbn {
 	join: sat_order {
 		from: sat_order
 		relationship: one_to_many
-		required_joins: [link_product_isbn, hub_product, link_user_product_contract, hub_contract, link_user_contract]
+		required_joins: [link_book_isbn, hub_book, link_user_book, hub_user, link_user_contract]
 		sql_on: ${link_user_contract.link_user_contract_key} = ${sat_order.link_user_contract_key} ;;
 	}
 		
@@ -2132,7 +2003,7 @@ explore: hub_isbn {
 	join: sat_user_contract {
 		from: sat_user_contract
 		relationship: one_to_many
-		required_joins: [link_product_isbn, hub_product, link_user_product_contract, hub_contract, link_user_contract]
+		required_joins: [link_book_isbn, hub_book, link_user_book, hub_user, link_user_contract]
 		sql_on: ${link_user_contract.link_user_contract_key} = ${sat_user_contract.link_user_contract_key} ;;
 	}
 		
@@ -2140,7 +2011,7 @@ explore: hub_isbn {
 	join: sat_sap_order {
 		from: sat_sap_order
 		relationship: one_to_many
-		required_joins: [link_coursesection_isbn, hub_coursesection, link_user_coursesection, hub_user, link_user_order]
+		required_joins: [link_book_isbn, hub_book, link_user_book, hub_user, link_user_order]
 		sql_on: ${link_user_order.link_user_order_key} = ${sat_sap_order.link_user_order_key} ;;
 	}
 		
@@ -2488,29 +2359,11 @@ explore: hub_order {
 	}
 		
 
-	join: link_product_relationship_parent {
-		from: link_product_relationship
-		relationship: one_to_many
-		required_joins: [link_user_order, hub_user, link_user_product_contract, hub_product]
-		sql_on: ${hub_product_parent.hub_parent_product_key} = ${link_product_relationship_parent.hub_product_key} ;;
-		fields: []
-	}
-		
-
 	join: sat_coursesection {
 		from: sat_coursesection
 		relationship: one_to_many
 		required_joins: [link_user_order, hub_user, link_user_coursesection, hub_coursesection]
 		sql_on: ${hub_coursesection.hub_coursesection_key} = ${sat_coursesection.hub_coursesection_key} ;;
-	}
-		
-
-	join: link_coursesection_coursesection_master {
-		from: link_coursesection_coursesection
-		relationship: one_to_many
-		required_joins: [link_user_order, hub_user, link_user_coursesection, hub_coursesection]
-		sql_on: ${hub_coursesection_master.hub_coursesection_key_master} = ${link_coursesection_coursesection_master.hub_coursesection_key} ;;
-		fields: []
 	}
 		
 
@@ -2557,18 +2410,10 @@ explore: hub_order {
 	}
 		
 
-	join: sat_product_relationship {
-		from: sat_product_relationship
-		relationship: one_to_many
-		required_joins: [link_user_order, hub_user, link_user_product_contract, hub_product, link_product_relationship]
-		sql_on: ${link_product_relationship.link_product_relationship_key} = ${sat_product_relationship.link_product_relationship_key} ;;
-	}
-		
-
 	join: hub_isbn {
 		from: hub_isbn
-		required_joins: [link_user_order, hub_user, link_user_product_contract, hub_product, link_product_isbn]
-		foreign_key: link_product_isbn.hub_isbn_key
+		required_joins: [link_user_order, hub_user, link_user_book, hub_book, link_book_isbn]
+		foreign_key: link_book_isbn.hub_isbn_key
 	}
 		
 }
@@ -2907,15 +2752,6 @@ explore: hub_platform {
 	}
 		
 
-	join: link_product_relationship_parent {
-		from: link_product_relationship
-		relationship: one_to_many
-		required_joins: [link_user_platform, hub_user, link_user_product_contract, hub_product]
-		sql_on: ${hub_product_parent.hub_parent_product_key} = ${link_product_relationship_parent.hub_product_key} ;;
-		fields: []
-	}
-		
-
 	join: link_subscription_order {
 		from: link_subscription_order
 		relationship: one_to_many
@@ -2930,15 +2766,6 @@ explore: hub_platform {
 		relationship: one_to_many
 		required_joins: [link_user_platform, hub_user, link_user_coursesection, hub_coursesection]
 		sql_on: ${hub_coursesection.hub_coursesection_key} = ${sat_coursesection.hub_coursesection_key} ;;
-	}
-		
-
-	join: link_coursesection_coursesection_master {
-		from: link_coursesection_coursesection
-		relationship: one_to_many
-		required_joins: [link_user_platform, hub_user, link_user_coursesection, hub_coursesection]
-		sql_on: ${hub_coursesection_master.hub_coursesection_key_master} = ${link_coursesection_coursesection_master.hub_coursesection_key} ;;
-		fields: []
 	}
 		
 
@@ -2985,18 +2812,10 @@ explore: hub_platform {
 	}
 		
 
-	join: sat_product_relationship {
-		from: sat_product_relationship
-		relationship: one_to_many
-		required_joins: [link_user_platform, hub_user, link_user_product_contract, hub_product, link_product_relationship]
-		sql_on: ${link_product_relationship.link_product_relationship_key} = ${sat_product_relationship.link_product_relationship_key} ;;
-	}
-		
-
 	join: hub_isbn {
 		from: hub_isbn
-		required_joins: [link_user_platform, hub_user, link_user_coursesection, hub_coursesection, link_coursesection_isbn]
-		foreign_key: link_coursesection_isbn.hub_isbn_key
+		required_joins: [link_user_platform, hub_user, link_user_product_contract, hub_product, link_product_isbn]
+		foreign_key: link_product_isbn.hub_isbn_key
 	}
 		
 }
@@ -3008,14 +2827,6 @@ explore: hub_product {
 		from: sat_product
 		relationship: one_to_many
 		sql_on: ${hub_product.hub_product_key} = ${sat_product.hub_product_key} ;;
-	}
-		
-
-	join: link_product_relationship_parent {
-		from: link_product_relationship
-		relationship: one_to_many
-		sql_on: ${hub_product_parent.hub_parent_product_key} = ${link_product_relationship_parent.hub_product_key} ;;
-		fields: []
 	}
 		
 
@@ -3085,14 +2896,6 @@ explore: hub_product {
 		from: hub_contract
 		required_joins: [link_user_product_contract]
 		foreign_key: link_user_product_contract.hub_contract_key
-	}
-		
-
-	join: sat_product_relationship {
-		from: sat_product_relationship
-		relationship: one_to_many
-		required_joins: [link_product_relationship]
-		sql_on: ${link_product_relationship.link_product_relationship_key} = ${sat_product_relationship.link_product_relationship_key} ;;
 	}
 		
 
@@ -3398,8 +3201,8 @@ explore: hub_product {
 	join: link_coursesection_institution {
 		from: link_coursesection_institution
 		relationship: one_to_many
-		required_joins: [link_product_isbn, hub_isbn, link_coursesection_isbn, hub_coursesection]
-		sql_on: ${hub_coursesection.hub_coursesection_key} = ${link_coursesection_institution.hub_coursesection_key} ;;
+		required_joins: [link_user_product_contract, hub_user, link_user_institution, hub_institution]
+		sql_on: ${hub_institution.hub_institution_key} = ${link_coursesection_institution.hub_institution_key} ;;
 		fields: []
 	}
 		
@@ -3409,15 +3212,6 @@ explore: hub_product {
 		relationship: one_to_many
 		required_joins: [link_product_isbn, hub_isbn, link_coursesection_isbn, hub_coursesection]
 		sql_on: ${hub_coursesection.hub_coursesection_key} = ${sat_coursesection.hub_coursesection_key} ;;
-	}
-		
-
-	join: link_coursesection_coursesection_master {
-		from: link_coursesection_coursesection
-		relationship: one_to_many
-		required_joins: [link_product_isbn, hub_isbn, link_coursesection_isbn, hub_coursesection]
-		sql_on: ${hub_coursesection_master.hub_coursesection_key_master} = ${link_coursesection_coursesection_master.hub_coursesection_key} ;;
-		fields: []
 	}
 		
 }
@@ -3476,15 +3270,6 @@ explore: hub_serialnumber {
 		relationship: one_to_many
 		required_joins: [link_user_product_serialnumber, hub_product]
 		sql_on: ${hub_product.hub_product_key} = ${sat_product.hub_product_key} ;;
-	}
-		
-
-	join: link_product_relationship_parent {
-		from: link_product_relationship
-		relationship: one_to_many
-		required_joins: [link_user_product_serialnumber, hub_product]
-		sql_on: ${hub_product_parent.hub_parent_product_key} = ${link_product_relationship_parent.hub_product_key} ;;
-		fields: []
 	}
 		
 
@@ -3682,8 +3467,8 @@ explore: hub_serialnumber {
 
 	join: hub_contract {
 		from: hub_contract
-		required_joins: [link_user_product_serialnumber, hub_user, link_user_contract_subscription]
-		foreign_key: link_user_contract_subscription.hub_contract_key
+		required_joins: [link_user_product_serialnumber, hub_product, link_user_product_contract]
+		foreign_key: link_user_product_contract.hub_contract_key
 	}
 		
 
@@ -3692,14 +3477,6 @@ explore: hub_serialnumber {
 		relationship: one_to_many
 		required_joins: [link_user_product_serialnumber, hub_user, link_user_contract]
 		sql_on: ${link_user_contract.link_user_contract_key} = ${sat_sap_contract.link_user_contract_key} ;;
-	}
-		
-
-	join: sat_product_relationship {
-		from: sat_product_relationship
-		relationship: one_to_many
-		required_joins: [link_user_product_serialnumber, hub_product, link_product_relationship]
-		sql_on: ${link_product_relationship.link_product_relationship_key} = ${sat_product_relationship.link_product_relationship_key} ;;
 	}
 		
 
@@ -3713,8 +3490,8 @@ explore: hub_serialnumber {
 
 	join: hub_subscription {
 		from: hub_subscription
-		required_joins: [link_user_product_serialnumber, hub_product, link_user_subscription_product]
-		foreign_key: link_user_subscription_product.hub_subscription_key
+		required_joins: [link_user_product_serialnumber, hub_user, link_user_contract_subscription]
+		foreign_key: link_user_contract_subscription.hub_subscription_key
 	}
 		
 
@@ -3798,8 +3575,8 @@ explore: hub_serialnumber {
 	join: link_coursesection_institution {
 		from: link_coursesection_institution
 		relationship: one_to_many
-		required_joins: [link_user_product_serialnumber, hub_user, link_user_institution, hub_institution]
-		sql_on: ${hub_institution.hub_institution_key} = ${link_coursesection_institution.hub_institution_key} ;;
+		required_joins: [link_user_product_serialnumber, hub_user, link_user_coursesection, hub_coursesection]
+		sql_on: ${hub_coursesection.hub_coursesection_key} = ${link_coursesection_institution.hub_coursesection_key} ;;
 		fields: []
 	}
 		
@@ -3818,15 +3595,6 @@ explore: hub_serialnumber {
 		relationship: one_to_many
 		required_joins: [link_user_product_serialnumber, hub_user, link_user_coursesection, hub_coursesection]
 		sql_on: ${hub_coursesection.hub_coursesection_key} = ${sat_coursesection.hub_coursesection_key} ;;
-	}
-		
-
-	join: link_coursesection_coursesection_master {
-		from: link_coursesection_coursesection
-		relationship: one_to_many
-		required_joins: [link_user_product_serialnumber, hub_user, link_user_coursesection, hub_coursesection]
-		sql_on: ${hub_coursesection_master.hub_coursesection_key_master} = ${link_coursesection_coursesection_master.hub_coursesection_key} ;;
-		fields: []
 	}
 		
 
@@ -3934,15 +3702,6 @@ explore: hub_subscription {
 		relationship: one_to_many
 		required_joins: [link_user_subscription_product, hub_product]
 		sql_on: ${hub_product.hub_product_key} = ${sat_product.hub_product_key} ;;
-	}
-		
-
-	join: link_product_relationship_parent {
-		from: link_product_relationship
-		relationship: one_to_many
-		required_joins: [link_user_subscription_product, hub_product]
-		sql_on: ${hub_product_parent.hub_parent_product_key} = ${link_product_relationship_parent.hub_product_key} ;;
-		fields: []
 	}
 		
 
@@ -4121,14 +3880,6 @@ explore: hub_subscription {
 	}
 		
 
-	join: sat_product_relationship {
-		from: sat_product_relationship
-		relationship: one_to_many
-		required_joins: [link_user_subscription_product, hub_product, link_product_relationship]
-		sql_on: ${link_product_relationship.link_product_relationship_key} = ${sat_product_relationship.link_product_relationship_key} ;;
-	}
-		
-
 	join: sat_subscription {
 		from: sat_subscription
 		relationship: one_to_many
@@ -4235,15 +3986,6 @@ explore: hub_subscription {
 		relationship: one_to_many
 		required_joins: [link_user_subscription_product, hub_user, link_user_coursesection, hub_coursesection]
 		sql_on: ${hub_coursesection.hub_coursesection_key} = ${sat_coursesection.hub_coursesection_key} ;;
-	}
-		
-
-	join: link_coursesection_coursesection_master {
-		from: link_coursesection_coursesection
-		relationship: one_to_many
-		required_joins: [link_user_subscription_product, hub_user, link_user_coursesection, hub_coursesection]
-		sql_on: ${hub_coursesection_master.hub_coursesection_key_master} = ${link_coursesection_coursesection_master.hub_coursesection_key} ;;
-		fields: []
 	}
 		
 
@@ -4591,15 +4333,6 @@ explore: hub_user {
 	}
 		
 
-	join: link_product_relationship_parent {
-		from: link_product_relationship
-		relationship: one_to_many
-		required_joins: [link_user_product_contract, hub_product]
-		sql_on: ${hub_product_parent.hub_parent_product_key} = ${link_product_relationship_parent.hub_product_key} ;;
-		fields: []
-	}
-		
-
 	join: link_subscription_order {
 		from: link_subscription_order
 		relationship: one_to_many
@@ -4614,15 +4347,6 @@ explore: hub_user {
 		relationship: one_to_many
 		required_joins: [link_user_coursesection, hub_coursesection]
 		sql_on: ${hub_coursesection.hub_coursesection_key} = ${sat_coursesection.hub_coursesection_key} ;;
-	}
-		
-
-	join: link_coursesection_coursesection_master {
-		from: link_coursesection_coursesection
-		relationship: one_to_many
-		required_joins: [link_user_coursesection, hub_coursesection]
-		sql_on: ${hub_coursesection_master.hub_coursesection_key_master} = ${link_coursesection_coursesection_master.hub_coursesection_key} ;;
-		fields: []
 	}
 		
 
@@ -4666,14 +4390,6 @@ explore: hub_user {
 		relationship: one_to_many
 		required_joins: [link_user_product_contract, hub_product]
 		sql_on: ${hub_product.hub_product_key} = ${sat_product_attr.hub_product_key} ;;
-	}
-		
-
-	join: sat_product_relationship {
-		from: sat_product_relationship
-		relationship: one_to_many
-		required_joins: [link_user_product_contract, hub_product, link_product_relationship]
-		sql_on: ${link_product_relationship.link_product_relationship_key} = ${sat_product_relationship.link_product_relationship_key} ;;
 	}
 		
 
