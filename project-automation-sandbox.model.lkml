@@ -7,7 +7,8 @@ include: "pit/*.view.lkml"
 include: "hub/*.view.lkml"
 
 
-explore: hub_book {
+explore: books {
+from: hub_book
 
 	join: link_book_isbn {
 		from: link_book_isbn
@@ -408,7 +409,8 @@ explore: hub_book {
 }
 		 
 
-explore: hub_contract {
+explore: contracts {
+from: hub_contract
 
 	join: link_user_contract_subscription {
 		from: link_user_contract_subscription
@@ -808,7 +810,8 @@ explore: hub_contract {
 }
 		 
 
-explore: hub_coursesection {
+explore: coursesections {
+from: hub_coursesection
 
 	join: link_user_coursesection {
 		from: link_user_coursesection
@@ -1207,17 +1210,20 @@ explore: hub_coursesection {
 }
 		 
 
-explore: hub_el_to_section_mapping {
+explore: el_to_section_mappings {
+from: hub_el_to_section_mapping
 
 }
 		 
 
-explore: hub_enterpriselicense {
+explore: enterpriselicenses {
+from: hub_enterpriselicense
 
 }
 		 
 
-explore: hub_institution {
+explore: institutions {
+from: hub_institution
 
 	join: link_coursesection_institution {
 		from: link_coursesection_institution
@@ -1618,7 +1624,8 @@ explore: hub_institution {
 }
 		 
 
-explore: hub_isbn {
+explore: isbns {
+from: hub_isbn
 
 	join: link_product_isbn {
 		from: link_product_isbn
@@ -2018,7 +2025,8 @@ explore: hub_isbn {
 }
 		 
 
-explore: hub_order {
+explore: orders {
+from: hub_order
 
 	join: link_subscription_order {
 		from: link_subscription_order
@@ -2419,7 +2427,8 @@ explore: hub_order {
 }
 		 
 
-explore: hub_platform {
+explore: platforms {
+from: hub_platform
 
 	join: link_user_platform {
 		from: link_user_platform
@@ -2821,7 +2830,8 @@ explore: hub_platform {
 }
 		 
 
-explore: hub_product {
+explore: products {
+from: hub_product
 
 	join: sat_product {
 		from: sat_product
@@ -3217,7 +3227,8 @@ explore: hub_product {
 }
 		 
 
-explore: hub_serialnumber {
+explore: serialnumbers {
+from: hub_serialnumber
 
 	join: sat_serialnumber {
 		from: sat_serialnumber
@@ -3618,7 +3629,8 @@ explore: hub_serialnumber {
 }
 		 
 
-explore: hub_subscription {
+explore: subscriptions {
+from: hub_subscription
 
 	join: link_subscription_order {
 		from: link_subscription_order
@@ -4017,7 +4029,8 @@ explore: hub_subscription {
 }
 		 
 
-explore: hub_user {
+explore: users {
+from: hub_user
 
 	join: link_user_coursesection {
 		from: link_user_coursesection
