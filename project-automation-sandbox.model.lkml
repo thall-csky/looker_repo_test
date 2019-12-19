@@ -13,14 +13,14 @@ from: hub_book
 	join: link_book_isbn {
 		from: hub_book
 		relationship: one_to_many
-		sql_on: ${hub_book.hub_book_key} = ${link_book_isbn.hub_book_key} ;;
+		sql_on: ${books.hub_book_key} = ${link_book_isbn.hub_book_key} ;;
 	}
 		
 
 	join: link_user_book {
 		from: hub_book
 		relationship: one_to_many
-		sql_on: ${hub_book.hub_book_key} = ${link_user_book.hub_book_key} ;;
+		sql_on: ${books.hub_book_key} = ${link_user_book.hub_book_key} ;;
 	}
 		
 
@@ -398,21 +398,21 @@ from: hub_contract
 	join: link_user_contract_subscription {
 		from: hub_contract
 		relationship: one_to_many
-		sql_on: ${hub_contract.hub_contract_key} = ${link_user_contract_subscription.hub_contract_key} ;;
+		sql_on: ${contracts.hub_contract_key} = ${link_user_contract_subscription.hub_contract_key} ;;
 	}
 		
 
 	join: link_user_product_contract {
 		from: hub_contract
 		relationship: one_to_many
-		sql_on: ${hub_contract.hub_contract_key} = ${link_user_product_contract.hub_contract_key} ;;
+		sql_on: ${contracts.hub_contract_key} = ${link_user_product_contract.hub_contract_key} ;;
 	}
 		
 
 	join: link_user_contract {
 		from: hub_contract
 		relationship: one_to_many
-		sql_on: ${hub_contract.hub_contract_key} = ${link_user_contract.hub_contract_key} ;;
+		sql_on: ${contracts.hub_contract_key} = ${link_user_contract.hub_contract_key} ;;
 	}
 		
 
@@ -782,28 +782,28 @@ from: hub_coursesection
 	join: link_user_coursesection {
 		from: hub_coursesection
 		relationship: one_to_many
-		sql_on: ${hub_coursesection.hub_coursesection_key} = ${link_user_coursesection.hub_coursesection_key} ;;
+		sql_on: ${coursesections.hub_coursesection_key} = ${link_user_coursesection.hub_coursesection_key} ;;
 	}
 		
 
 	join: link_coursesection_institution {
 		from: hub_coursesection
 		relationship: one_to_many
-		sql_on: ${hub_coursesection.hub_coursesection_key} = ${link_coursesection_institution.hub_coursesection_key} ;;
+		sql_on: ${coursesections.hub_coursesection_key} = ${link_coursesection_institution.hub_coursesection_key} ;;
 	}
 		
 
 	join: sat_coursesection {
 		from: hub_coursesection
 		relationship: one_to_many
-		sql_on: ${hub_coursesection.hub_coursesection_key} = ${sat_coursesection.hub_coursesection_key} ;;
+		sql_on: ${coursesections.hub_coursesection_key} = ${sat_coursesection.hub_coursesection_key} ;;
 	}
 		
 
 	join: link_coursesection_isbn {
 		from: hub_coursesection
 		relationship: one_to_many
-		sql_on: ${hub_coursesection.hub_coursesection_key} = ${link_coursesection_isbn.hub_coursesection_key} ;;
+		sql_on: ${coursesections.hub_coursesection_key} = ${link_coursesection_isbn.hub_coursesection_key} ;;
 	}
 		
 
@@ -1177,14 +1177,14 @@ from: hub_institution
 	join: link_coursesection_institution {
 		from: hub_institution
 		relationship: one_to_many
-		sql_on: ${hub_institution.hub_institution_key} = ${link_coursesection_institution.hub_institution_key} ;;
+		sql_on: ${institutions.hub_institution_key} = ${link_coursesection_institution.hub_institution_key} ;;
 	}
 		
 
 	join: link_user_institution {
 		from: hub_institution
 		relationship: one_to_many
-		sql_on: ${hub_institution.hub_institution_key} = ${link_user_institution.hub_institution_key} ;;
+		sql_on: ${institutions.hub_institution_key} = ${link_user_institution.hub_institution_key} ;;
 	}
 		
 
@@ -1562,21 +1562,21 @@ from: hub_isbn
 	join: link_product_isbn {
 		from: hub_isbn
 		relationship: one_to_many
-		sql_on: ${hub_isbn.hub_isbn_key} = ${link_product_isbn.hub_isbn_key} ;;
+		sql_on: ${isbns.hub_isbn_key} = ${link_product_isbn.hub_isbn_key} ;;
 	}
 		
 
 	join: link_book_isbn {
 		from: hub_isbn
 		relationship: one_to_many
-		sql_on: ${hub_isbn.hub_isbn_key} = ${link_book_isbn.hub_isbn_key} ;;
+		sql_on: ${isbns.hub_isbn_key} = ${link_book_isbn.hub_isbn_key} ;;
 	}
 		
 
 	join: link_coursesection_isbn {
 		from: hub_isbn
 		relationship: one_to_many
-		sql_on: ${hub_isbn.hub_isbn_key} = ${link_coursesection_isbn.hub_isbn_key} ;;
+		sql_on: ${isbns.hub_isbn_key} = ${link_coursesection_isbn.hub_isbn_key} ;;
 	}
 		
 
@@ -1946,14 +1946,14 @@ from: hub_order
 	join: link_subscription_order {
 		from: hub_order
 		relationship: one_to_many
-		sql_on: ${hub_order.hub_order_key} = ${link_subscription_order.hub_order_key} ;;
+		sql_on: ${orders.hub_order_key} = ${link_subscription_order.hub_order_key} ;;
 	}
 		
 
 	join: link_user_order {
 		from: hub_order
 		relationship: one_to_many
-		sql_on: ${hub_order.hub_order_key} = ${link_user_order.hub_order_key} ;;
+		sql_on: ${orders.hub_order_key} = ${link_user_order.hub_order_key} ;;
 	}
 		
 
@@ -2331,7 +2331,7 @@ from: hub_platform
 	join: link_user_platform {
 		from: hub_platform
 		relationship: one_to_many
-		sql_on: ${hub_platform.hub_platform_key} = ${link_user_platform.hub_platform_key} ;;
+		sql_on: ${platforms.hub_platform_key} = ${link_user_platform.hub_platform_key} ;;
 	}
 		
 
@@ -2717,49 +2717,49 @@ from: hub_product
 	join: sat_product {
 		from: hub_product
 		relationship: one_to_many
-		sql_on: ${hub_product.hub_product_key} = ${sat_product.hub_product_key} ;;
+		sql_on: ${products.hub_product_key} = ${sat_product.hub_product_key} ;;
 	}
 		
 
 	join: link_product_isbn {
 		from: hub_product
 		relationship: one_to_many
-		sql_on: ${hub_product.hub_product_key} = ${link_product_isbn.hub_product_key} ;;
+		sql_on: ${products.hub_product_key} = ${link_product_isbn.hub_product_key} ;;
 	}
 		
 
 	join: link_user_product_serialnumber {
 		from: hub_product
 		relationship: one_to_many
-		sql_on: ${hub_product.hub_product_key} = ${link_user_product_serialnumber.hub_product_key} ;;
+		sql_on: ${products.hub_product_key} = ${link_user_product_serialnumber.hub_product_key} ;;
 	}
 		
 
 	join: link_user_product_contract {
 		from: hub_product
 		relationship: one_to_many
-		sql_on: ${hub_product.hub_product_key} = ${link_user_product_contract.hub_product_key} ;;
+		sql_on: ${products.hub_product_key} = ${link_user_product_contract.hub_product_key} ;;
 	}
 		
 
 	join: link_user_subscription_product {
 		from: hub_product
 		relationship: one_to_many
-		sql_on: ${hub_product.hub_product_key} = ${link_user_subscription_product.hub_product_key} ;;
+		sql_on: ${products.hub_product_key} = ${link_user_subscription_product.hub_product_key} ;;
 	}
 		
 
 	join: sat_product_attr {
 		from: hub_product
 		relationship: one_to_many
-		sql_on: ${hub_product.hub_product_key} = ${sat_product_attr.hub_product_key} ;;
+		sql_on: ${products.hub_product_key} = ${sat_product_attr.hub_product_key} ;;
 	}
 		
 
 	join: link_user_product {
 		from: hub_product
 		relationship: one_to_many
-		sql_on: ${hub_product.hub_product_key} = ${link_user_product.hub_product_key} ;;
+		sql_on: ${products.hub_product_key} = ${link_user_product.hub_product_key} ;;
 	}
 		
 
@@ -3097,14 +3097,14 @@ from: hub_serialnumber
 	join: sat_serialnumber {
 		from: hub_serialnumber
 		relationship: one_to_many
-		sql_on: ${hub_serialnumber.hub_serialnumber_key} = ${sat_serialnumber.hub_serialnumber_key} ;;
+		sql_on: ${serialnumbers.hub_serialnumber_key} = ${sat_serialnumber.hub_serialnumber_key} ;;
 	}
 		
 
 	join: link_user_product_serialnumber {
 		from: hub_serialnumber
 		relationship: one_to_many
-		sql_on: ${hub_serialnumber.hub_serialnumber_key} = ${link_user_product_serialnumber.hub_serialnumber_key} ;;
+		sql_on: ${serialnumbers.hub_serialnumber_key} = ${link_user_product_serialnumber.hub_serialnumber_key} ;;
 	}
 		
 
@@ -3482,28 +3482,28 @@ from: hub_subscription
 	join: link_subscription_order {
 		from: hub_subscription
 		relationship: one_to_many
-		sql_on: ${hub_subscription.hub_subscription_key} = ${link_subscription_order.hub_subscription_key} ;;
+		sql_on: ${subscriptions.hub_subscription_key} = ${link_subscription_order.hub_subscription_key} ;;
 	}
 		
 
 	join: link_user_contract_subscription {
 		from: hub_subscription
 		relationship: one_to_many
-		sql_on: ${hub_subscription.hub_subscription_key} = ${link_user_contract_subscription.hub_subscription_key} ;;
+		sql_on: ${subscriptions.hub_subscription_key} = ${link_user_contract_subscription.hub_subscription_key} ;;
 	}
 		
 
 	join: link_user_subscription {
 		from: hub_subscription
 		relationship: one_to_many
-		sql_on: ${hub_subscription.hub_subscription_key} = ${link_user_subscription.hub_subscription_key} ;;
+		sql_on: ${subscriptions.hub_subscription_key} = ${link_user_subscription.hub_subscription_key} ;;
 	}
 		
 
 	join: link_user_subscription_product {
 		from: hub_subscription
 		relationship: one_to_many
-		sql_on: ${hub_subscription.hub_subscription_key} = ${link_user_subscription_product.hub_subscription_key} ;;
+		sql_on: ${subscriptions.hub_subscription_key} = ${link_user_subscription_product.hub_subscription_key} ;;
 	}
 		
 
@@ -3865,126 +3865,126 @@ from: hub_user
 	join: link_user_coursesection {
 		from: hub_user
 		relationship: one_to_many
-		sql_on: ${hub_user.hub_user_key} = ${link_user_coursesection.hub_user_key} ;;
+		sql_on: ${users.hub_user_key} = ${link_user_coursesection.hub_user_key} ;;
 	}
 		
 
 	join: link_user_contract_subscription {
 		from: hub_user
 		relationship: one_to_many
-		sql_on: ${hub_user.hub_user_key} = ${link_user_contract_subscription.hub_user_key} ;;
+		sql_on: ${users.hub_user_key} = ${link_user_contract_subscription.hub_user_key} ;;
 	}
 		
 
 	join: link_user_subscription {
 		from: hub_user
 		relationship: one_to_many
-		sql_on: ${hub_user.hub_user_key} = ${link_user_subscription.hub_user_key} ;;
+		sql_on: ${users.hub_user_key} = ${link_user_subscription.hub_user_key} ;;
 	}
 		
 
 	join: sat_user_pii {
 		from: hub_user
 		relationship: one_to_many
-		sql_on: ${hub_user.hub_user_key} = ${sat_user_pii.hub_user_key} ;;
+		sql_on: ${users.hub_user_key} = ${sat_user_pii.hub_user_key} ;;
 	}
 		
 
 	join: link_user_product_serialnumber {
 		from: hub_user
 		relationship: one_to_many
-		sql_on: ${hub_user.hub_user_key} = ${link_user_product_serialnumber.hub_user_key} ;;
+		sql_on: ${users.hub_user_key} = ${link_user_product_serialnumber.hub_user_key} ;;
 	}
 		
 
 	join: sat_user_login {
 		from: hub_user
 		relationship: one_to_many
-		sql_on: ${hub_user.hub_user_key} = ${sat_user_login.hub_user_key} ;;
+		sql_on: ${users.hub_user_key} = ${sat_user_login.hub_user_key} ;;
 	}
 		
 
 	join: link_user_product_contract {
 		from: hub_user
 		relationship: one_to_many
-		sql_on: ${hub_user.hub_user_key} = ${link_user_product_contract.hub_user_key} ;;
+		sql_on: ${users.hub_user_key} = ${link_user_product_contract.hub_user_key} ;;
 	}
 		
 
 	join: sat_user_marketing {
 		from: hub_user
 		relationship: one_to_many
-		sql_on: ${hub_user.hub_user_key} = ${sat_user_marketing.hub_user_key} ;;
+		sql_on: ${users.hub_user_key} = ${sat_user_marketing.hub_user_key} ;;
 	}
 		
 
 	join: sat_user {
 		from: hub_user
 		relationship: one_to_many
-		sql_on: ${hub_user.hub_user_key} = ${sat_user.hub_user_key} ;;
+		sql_on: ${users.hub_user_key} = ${sat_user.hub_user_key} ;;
 	}
 		
 
 	join: link_user_platform {
 		from: hub_user
 		relationship: one_to_many
-		sql_on: ${hub_user.hub_user_key} = ${link_user_platform.hub_user_key} ;;
+		sql_on: ${users.hub_user_key} = ${link_user_platform.hub_user_key} ;;
 	}
 		
 
 	join: link_user_order {
 		from: hub_user
 		relationship: one_to_many
-		sql_on: ${hub_user.hub_user_key} = ${link_user_order.hub_user_key} ;;
+		sql_on: ${users.hub_user_key} = ${link_user_order.hub_user_key} ;;
 	}
 		
 
 	join: link_user_subscription_product {
 		from: hub_user
 		relationship: one_to_many
-		sql_on: ${hub_user.hub_user_key} = ${link_user_subscription_product.hub_user_key} ;;
+		sql_on: ${users.hub_user_key} = ${link_user_subscription_product.hub_user_key} ;;
 	}
 		
 
 	join: link_user_institution {
 		from: hub_user
 		relationship: one_to_many
-		sql_on: ${hub_user.hub_user_key} = ${link_user_institution.hub_user_key} ;;
+		sql_on: ${users.hub_user_key} = ${link_user_institution.hub_user_key} ;;
 	}
 		
 
 	join: sat_user_internal {
 		from: hub_user
 		relationship: one_to_many
-		sql_on: ${hub_user.hub_user_key} = ${sat_user_internal.hub_user_key} ;;
+		sql_on: ${users.hub_user_key} = ${sat_user_internal.hub_user_key} ;;
 	}
 		
 
 	join: pit_user {
 		from: hub_user
 		relationship: one_to_many
-		sql_on: ${hub_user.hub_user_key} = ${pit_user.hub_user_key} ;;
+		sql_on: ${users.hub_user_key} = ${pit_user.hub_user_key} ;;
 	}
 		
 
 	join: link_user_book {
 		from: hub_user
 		relationship: one_to_many
-		sql_on: ${hub_user.hub_user_key} = ${link_user_book.hub_user_key} ;;
+		sql_on: ${users.hub_user_key} = ${link_user_book.hub_user_key} ;;
 	}
 		
 
 	join: link_user_contract {
 		from: hub_user
 		relationship: one_to_many
-		sql_on: ${hub_user.hub_user_key} = ${link_user_contract.hub_user_key} ;;
+		sql_on: ${users.hub_user_key} = ${link_user_contract.hub_user_key} ;;
 	}
 		
 
 	join: link_user_product {
 		from: hub_user
 		relationship: one_to_many
-		sql_on: ${hub_user.hub_user_key} = ${link_user_product.hub_user_key} ;;
+		sql_on: ${users.hub_user_key} = ${link_user_product.hub_user_key} ;;
 	}
 		
 
