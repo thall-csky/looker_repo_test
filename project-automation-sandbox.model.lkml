@@ -28,14 +28,14 @@ explore: hub_book {
 	join: hub_user {
 		from: hub_user
 		required_joins: [link_user_book]
-		foreign_key: ${link_user_book.hub_user_key}
+		foreign_key: link_user_book.hub_user_key
 	}
 		
 
 	join: hub_isbn {
 		from: hub_isbn
 		required_joins: [link_book_isbn]
-		foreign_key: ${link_book_isbn.hub_isbn_key}
+		foreign_key: link_book_isbn.hub_isbn_key
 	}
 		
 
@@ -215,7 +215,7 @@ explore: hub_book {
 	join: hub_order {
 		from: hub_order
 		required_joins: [link_user_book, hub_user, link_user_order]
-		foreign_key: ${link_user_order.hub_order_key}
+		foreign_key: link_user_order.hub_order_key
 	}
 		
 
@@ -230,7 +230,7 @@ explore: hub_book {
 	join: hub_platform {
 		from: hub_platform
 		required_joins: [link_user_book, hub_user, link_user_platform]
-		foreign_key: ${link_user_platform.hub_platform_key}
+		foreign_key: link_user_platform.hub_platform_key
 	}
 		
 
@@ -245,7 +245,7 @@ explore: hub_book {
 	join: hub_contract {
 		from: hub_contract
 		required_joins: [link_user_book, hub_user, link_user_product_contract]
-		foreign_key: ${link_user_product_contract.hub_contract_key}
+		foreign_key: link_user_product_contract.hub_contract_key
 	}
 		
 
@@ -268,7 +268,7 @@ explore: hub_book {
 	join: hub_subscription {
 		from: hub_subscription
 		required_joins: [link_user_book, hub_user, link_user_subscription_product]
-		foreign_key: ${link_user_subscription_product.hub_subscription_key}
+		foreign_key: link_user_subscription_product.hub_subscription_key
 	}
 		
 
@@ -283,7 +283,7 @@ explore: hub_book {
 	join: hub_serialnumber {
 		from: hub_serialnumber
 		required_joins: [link_user_book, hub_user, link_user_product_serialnumber]
-		foreign_key: ${link_user_product_serialnumber.hub_serialnumber_key}
+		foreign_key: link_user_product_serialnumber.hub_serialnumber_key
 	}
 		
 
@@ -306,7 +306,7 @@ explore: hub_book {
 	join: hub_product {
 		from: hub_product
 		required_joins: [link_user_book, hub_user, link_user_product_contract]
-		foreign_key: ${link_user_product_contract.hub_product_key}
+		foreign_key: link_user_product_contract.hub_product_key
 	}
 		
 
@@ -329,7 +329,7 @@ explore: hub_book {
 	join: hub_institution {
 		from: hub_institution
 		required_joins: [link_user_book, hub_user, link_user_institution]
-		foreign_key: ${link_user_institution.hub_institution_key}
+		foreign_key: link_user_institution.hub_institution_key
 	}
 		
 
@@ -344,7 +344,7 @@ explore: hub_book {
 	join: hub_coursesection {
 		from: hub_coursesection
 		required_joins: [link_book_isbn, hub_isbn, link_coursesection_isbn]
-		foreign_key: ${link_coursesection_isbn.hub_coursesection_key}
+		foreign_key: link_coursesection_isbn.hub_coursesection_key
 	}
 		
 
@@ -463,7 +463,7 @@ explore: hub_contract {
 	join: hub_user {
 		from: hub_user
 		required_joins: [link_user_contract_subscription]
-		foreign_key: ${link_user_contract_subscription.hub_user_key}
+		foreign_key: link_user_contract_subscription.hub_user_key
 	}
 		
 
@@ -486,7 +486,7 @@ explore: hub_contract {
 	join: hub_subscription {
 		from: hub_subscription
 		required_joins: [link_user_contract_subscription]
-		foreign_key: ${link_user_contract_subscription.hub_subscription_key}
+		foreign_key: link_user_contract_subscription.hub_subscription_key
 	}
 		
 
@@ -501,7 +501,7 @@ explore: hub_contract {
 	join: hub_product {
 		from: hub_product
 		required_joins: [link_user_product_contract]
-		foreign_key: ${link_user_product_contract.hub_product_key}
+		foreign_key: link_user_product_contract.hub_product_key
 	}
 		
 
@@ -696,7 +696,7 @@ explore: hub_contract {
 	join: hub_order {
 		from: hub_order
 		required_joins: [link_user_contract_subscription, hub_user, link_user_order]
-		foreign_key: ${link_user_order.hub_order_key}
+		foreign_key: link_user_order.hub_order_key
 	}
 		
 
@@ -711,14 +711,14 @@ explore: hub_contract {
 	join: hub_book {
 		from: hub_book
 		required_joins: [link_user_contract_subscription, hub_user, link_user_book]
-		foreign_key: ${link_user_book.hub_book_key}
+		foreign_key: link_user_book.hub_book_key
 	}
 		
 
 	join: hub_platform {
 		from: hub_platform
 		required_joins: [link_user_contract_subscription, hub_user, link_user_platform]
-		foreign_key: ${link_user_platform.hub_platform_key}
+		foreign_key: link_user_platform.hub_platform_key
 	}
 		
 
@@ -749,7 +749,7 @@ explore: hub_contract {
 	join: hub_serialnumber {
 		from: hub_serialnumber
 		required_joins: [link_user_product_contract, hub_product, link_user_product_serialnumber]
-		foreign_key: ${link_user_product_serialnumber.hub_serialnumber_key}
+		foreign_key: link_user_product_serialnumber.hub_serialnumber_key
 	}
 		
 
@@ -764,7 +764,7 @@ explore: hub_contract {
 	join: hub_isbn {
 		from: hub_isbn
 		required_joins: [link_user_product_contract, hub_product, link_product_isbn]
-		foreign_key: ${link_product_isbn.hub_isbn_key}
+		foreign_key: link_product_isbn.hub_isbn_key
 	}
 		
 
@@ -787,14 +787,14 @@ explore: hub_contract {
 	join: hub_institution {
 		from: hub_institution
 		required_joins: [link_user_contract_subscription, hub_user, link_user_institution]
-		foreign_key: ${link_user_institution.hub_institution_key}
+		foreign_key: link_user_institution.hub_institution_key
 	}
 		
 
 	join: hub_coursesection {
 		from: hub_coursesection
 		required_joins: [link_user_contract_subscription, hub_user, link_user_coursesection]
-		foreign_key: ${link_user_coursesection.hub_coursesection_key}
+		foreign_key: link_user_coursesection.hub_coursesection_key
 	}
 		
 
@@ -904,7 +904,7 @@ explore: hub_coursesection {
 	join: hub_user {
 		from: hub_user
 		required_joins: [link_user_coursesection]
-		foreign_key: ${link_user_coursesection.hub_user_key}
+		foreign_key: link_user_coursesection.hub_user_key
 	}
 		
 
@@ -919,14 +919,14 @@ explore: hub_coursesection {
 	join: hub_isbn {
 		from: hub_isbn
 		required_joins: [link_coursesection_isbn]
-		foreign_key: ${link_coursesection_isbn.hub_isbn_key}
+		foreign_key: link_coursesection_isbn.hub_isbn_key
 	}
 		
 
 	join: hub_institution {
 		from: hub_institution
 		required_joins: [link_coursesection_institution]
-		foreign_key: ${link_coursesection_institution.hub_institution_key}
+		foreign_key: link_coursesection_institution.hub_institution_key
 	}
 		
 
@@ -1098,7 +1098,7 @@ explore: hub_coursesection {
 	join: hub_order {
 		from: hub_order
 		required_joins: [link_user_coursesection, hub_user, link_user_order]
-		foreign_key: ${link_user_order.hub_order_key}
+		foreign_key: link_user_order.hub_order_key
 	}
 		
 
@@ -1113,14 +1113,14 @@ explore: hub_coursesection {
 	join: hub_book {
 		from: hub_book
 		required_joins: [link_coursesection_isbn, hub_isbn, link_book_isbn]
-		foreign_key: ${link_book_isbn.hub_book_key}
+		foreign_key: link_book_isbn.hub_book_key
 	}
 		
 
 	join: hub_platform {
 		from: hub_platform
 		required_joins: [link_user_coursesection, hub_user, link_user_platform]
-		foreign_key: ${link_user_platform.hub_platform_key}
+		foreign_key: link_user_platform.hub_platform_key
 	}
 		
 
@@ -1135,7 +1135,7 @@ explore: hub_coursesection {
 	join: hub_contract {
 		from: hub_contract
 		required_joins: [link_user_coursesection, hub_user, link_user_product_contract]
-		foreign_key: ${link_user_product_contract.hub_contract_key}
+		foreign_key: link_user_product_contract.hub_contract_key
 	}
 		
 
@@ -1158,7 +1158,7 @@ explore: hub_coursesection {
 	join: hub_subscription {
 		from: hub_subscription
 		required_joins: [link_user_coursesection, hub_user, link_user_subscription_product]
-		foreign_key: ${link_user_subscription_product.hub_subscription_key}
+		foreign_key: link_user_subscription_product.hub_subscription_key
 	}
 		
 
@@ -1173,7 +1173,7 @@ explore: hub_coursesection {
 	join: hub_serialnumber {
 		from: hub_serialnumber
 		required_joins: [link_user_coursesection, hub_user, link_user_product_serialnumber]
-		foreign_key: ${link_user_product_serialnumber.hub_serialnumber_key}
+		foreign_key: link_user_product_serialnumber.hub_serialnumber_key
 	}
 		
 
@@ -1188,7 +1188,7 @@ explore: hub_coursesection {
 	join: hub_product {
 		from: hub_product
 		required_joins: [link_user_coursesection, hub_user, link_user_product_contract]
-		foreign_key: ${link_user_product_contract.hub_product_key}
+		foreign_key: link_user_product_contract.hub_product_key
 	}
 		
 
@@ -1323,14 +1323,14 @@ explore: hub_institution {
 	join: hub_user {
 		from: hub_user
 		required_joins: [link_user_institution]
-		foreign_key: ${link_user_institution.hub_user_key}
+		foreign_key: link_user_institution.hub_user_key
 	}
 		
 
 	join: hub_coursesection {
 		from: hub_coursesection
 		required_joins: [link_coursesection_institution]
-		foreign_key: ${link_coursesection_institution.hub_coursesection_key}
+		foreign_key: link_coursesection_institution.hub_coursesection_key
 	}
 		
 
@@ -1510,21 +1510,21 @@ explore: hub_institution {
 	join: hub_order {
 		from: hub_order
 		required_joins: [link_user_institution, hub_user, link_user_order]
-		foreign_key: ${link_user_order.hub_order_key}
+		foreign_key: link_user_order.hub_order_key
 	}
 		
 
 	join: hub_book {
 		from: hub_book
 		required_joins: [link_user_institution, hub_user, link_user_book]
-		foreign_key: ${link_user_book.hub_book_key}
+		foreign_key: link_user_book.hub_book_key
 	}
 		
 
 	join: hub_platform {
 		from: hub_platform
 		required_joins: [link_user_institution, hub_user, link_user_platform]
-		foreign_key: ${link_user_platform.hub_platform_key}
+		foreign_key: link_user_platform.hub_platform_key
 	}
 		
 
@@ -1539,7 +1539,7 @@ explore: hub_institution {
 	join: hub_contract {
 		from: hub_contract
 		required_joins: [link_user_institution, hub_user, link_user_contract_subscription]
-		foreign_key: ${link_user_contract_subscription.hub_contract_key}
+		foreign_key: link_user_contract_subscription.hub_contract_key
 	}
 		
 
@@ -1562,7 +1562,7 @@ explore: hub_institution {
 	join: hub_subscription {
 		from: hub_subscription
 		required_joins: [link_user_institution, hub_user, link_user_contract_subscription]
-		foreign_key: ${link_user_contract_subscription.hub_subscription_key}
+		foreign_key: link_user_contract_subscription.hub_subscription_key
 	}
 		
 
@@ -1577,7 +1577,7 @@ explore: hub_institution {
 	join: hub_serialnumber {
 		from: hub_serialnumber
 		required_joins: [link_user_institution, hub_user, link_user_product_serialnumber]
-		foreign_key: ${link_user_product_serialnumber.hub_serialnumber_key}
+		foreign_key: link_user_product_serialnumber.hub_serialnumber_key
 	}
 		
 
@@ -1600,14 +1600,14 @@ explore: hub_institution {
 	join: hub_isbn {
 		from: hub_isbn
 		required_joins: [link_coursesection_institution, hub_coursesection, link_coursesection_isbn]
-		foreign_key: ${link_coursesection_isbn.hub_isbn_key}
+		foreign_key: link_coursesection_isbn.hub_isbn_key
 	}
 		
 
 	join: hub_product {
 		from: hub_product
 		required_joins: [link_user_institution, hub_user, link_user_product_contract]
-		foreign_key: ${link_user_product_contract.hub_product_key}
+		foreign_key: link_user_product_contract.hub_product_key
 	}
 		
 
@@ -1750,21 +1750,21 @@ explore: hub_isbn {
 	join: hub_book {
 		from: hub_book
 		required_joins: [link_book_isbn]
-		foreign_key: ${link_book_isbn.hub_book_key}
+		foreign_key: link_book_isbn.hub_book_key
 	}
 		
 
 	join: hub_product {
 		from: hub_product
 		required_joins: [link_product_isbn]
-		foreign_key: ${link_product_isbn.hub_product_key}
+		foreign_key: link_product_isbn.hub_product_key
 	}
 		
 
 	join: hub_coursesection {
 		from: hub_coursesection
 		required_joins: [link_coursesection_isbn]
-		foreign_key: ${link_coursesection_isbn.hub_coursesection_key}
+		foreign_key: link_coursesection_isbn.hub_coursesection_key
 	}
 		
 
@@ -1876,7 +1876,7 @@ explore: hub_isbn {
 	join: hub_user {
 		from: hub_user
 		required_joins: [link_coursesection_isbn, hub_coursesection, link_user_coursesection]
-		foreign_key: ${link_user_coursesection.hub_user_key}
+		foreign_key: link_user_coursesection.hub_user_key
 	}
 		
 
@@ -1891,7 +1891,7 @@ explore: hub_isbn {
 	join: hub_contract {
 		from: hub_contract
 		required_joins: [link_product_isbn, hub_product, link_user_product_contract]
-		foreign_key: ${link_user_product_contract.hub_contract_key}
+		foreign_key: link_user_product_contract.hub_contract_key
 	}
 		
 
@@ -1906,14 +1906,14 @@ explore: hub_isbn {
 	join: hub_subscription {
 		from: hub_subscription
 		required_joins: [link_product_isbn, hub_product, link_user_subscription_product]
-		foreign_key: ${link_user_subscription_product.hub_subscription_key}
+		foreign_key: link_user_subscription_product.hub_subscription_key
 	}
 		
 
 	join: hub_serialnumber {
 		from: hub_serialnumber
 		required_joins: [link_product_isbn, hub_product, link_user_product_serialnumber]
-		foreign_key: ${link_user_product_serialnumber.hub_serialnumber_key}
+		foreign_key: link_user_product_serialnumber.hub_serialnumber_key
 	}
 		
 
@@ -1944,7 +1944,7 @@ explore: hub_isbn {
 	join: hub_institution {
 		from: hub_institution
 		required_joins: [link_coursesection_isbn, hub_coursesection, link_coursesection_institution]
-		foreign_key: ${link_coursesection_institution.hub_institution_key}
+		foreign_key: link_coursesection_institution.hub_institution_key
 	}
 		
 
@@ -2070,7 +2070,7 @@ explore: hub_isbn {
 	join: hub_order {
 		from: hub_order
 		required_joins: [link_product_isbn, hub_product, link_user_subscription_product, hub_subscription, link_subscription_order]
-		foreign_key: ${link_subscription_order.hub_order_key}
+		foreign_key: link_subscription_order.hub_order_key
 	}
 		
 
@@ -2085,7 +2085,7 @@ explore: hub_isbn {
 	join: hub_platform {
 		from: hub_platform
 		required_joins: [link_coursesection_isbn, hub_coursesection, link_user_coursesection, hub_user, link_user_platform]
-		foreign_key: ${link_user_platform.hub_platform_key}
+		foreign_key: link_user_platform.hub_platform_key
 	}
 		
 
@@ -2168,14 +2168,14 @@ explore: hub_order {
 	join: hub_user {
 		from: hub_user
 		required_joins: [link_user_order]
-		foreign_key: ${link_user_order.hub_user_key}
+		foreign_key: link_user_order.hub_user_key
 	}
 		
 
 	join: hub_subscription {
 		from: hub_subscription
 		required_joins: [link_subscription_order]
-		foreign_key: ${link_subscription_order.hub_subscription_key}
+		foreign_key: link_subscription_order.hub_subscription_key
 	}
 		
 
@@ -2345,14 +2345,14 @@ explore: hub_order {
 	join: hub_book {
 		from: hub_book
 		required_joins: [link_user_order, hub_user, link_user_book]
-		foreign_key: ${link_user_book.hub_book_key}
+		foreign_key: link_user_book.hub_book_key
 	}
 		
 
 	join: hub_platform {
 		from: hub_platform
 		required_joins: [link_user_order, hub_user, link_user_platform]
-		foreign_key: ${link_user_platform.hub_platform_key}
+		foreign_key: link_user_platform.hub_platform_key
 	}
 		
 
@@ -2367,7 +2367,7 @@ explore: hub_order {
 	join: hub_contract {
 		from: hub_contract
 		required_joins: [link_subscription_order, hub_subscription, link_user_contract_subscription]
-		foreign_key: ${link_user_contract_subscription.hub_contract_key}
+		foreign_key: link_user_contract_subscription.hub_contract_key
 	}
 		
 
@@ -2398,7 +2398,7 @@ explore: hub_order {
 	join: hub_serialnumber {
 		from: hub_serialnumber
 		required_joins: [link_user_order, hub_user, link_user_product_serialnumber]
-		foreign_key: ${link_user_product_serialnumber.hub_serialnumber_key}
+		foreign_key: link_user_product_serialnumber.hub_serialnumber_key
 	}
 		
 
@@ -2421,7 +2421,7 @@ explore: hub_order {
 	join: hub_product {
 		from: hub_product
 		required_joins: [link_subscription_order, hub_subscription, link_user_subscription_product]
-		foreign_key: ${link_user_subscription_product.hub_product_key}
+		foreign_key: link_user_subscription_product.hub_product_key
 	}
 		
 
@@ -2452,7 +2452,7 @@ explore: hub_order {
 	join: hub_institution {
 		from: hub_institution
 		required_joins: [link_user_order, hub_user, link_user_institution]
-		foreign_key: ${link_user_institution.hub_institution_key}
+		foreign_key: link_user_institution.hub_institution_key
 	}
 		
 
@@ -2467,7 +2467,7 @@ explore: hub_order {
 	join: hub_coursesection {
 		from: hub_coursesection
 		required_joins: [link_user_order, hub_user, link_user_coursesection]
-		foreign_key: ${link_user_coursesection.hub_coursesection_key}
+		foreign_key: link_user_coursesection.hub_coursesection_key
 	}
 		
 
@@ -2568,7 +2568,7 @@ explore: hub_order {
 	join: hub_isbn {
 		from: hub_isbn
 		required_joins: [link_subscription_order, hub_subscription, link_user_subscription_product, hub_product, link_product_isbn]
-		foreign_key: ${link_product_isbn.hub_isbn_key}
+		foreign_key: link_product_isbn.hub_isbn_key
 	}
 		
 }
@@ -2587,7 +2587,7 @@ explore: hub_platform {
 	join: hub_user {
 		from: hub_user
 		required_joins: [link_user_platform]
-		foreign_key: ${link_user_platform.hub_user_key}
+		foreign_key: link_user_platform.hub_user_key
 	}
 		
 
@@ -2749,7 +2749,7 @@ explore: hub_platform {
 	join: hub_order {
 		from: hub_order
 		required_joins: [link_user_platform, hub_user, link_user_order]
-		foreign_key: ${link_user_order.hub_order_key}
+		foreign_key: link_user_order.hub_order_key
 	}
 		
 
@@ -2764,7 +2764,7 @@ explore: hub_platform {
 	join: hub_book {
 		from: hub_book
 		required_joins: [link_user_platform, hub_user, link_user_book]
-		foreign_key: ${link_user_book.hub_book_key}
+		foreign_key: link_user_book.hub_book_key
 	}
 		
 
@@ -2779,7 +2779,7 @@ explore: hub_platform {
 	join: hub_contract {
 		from: hub_contract
 		required_joins: [link_user_platform, hub_user, link_user_product_contract]
-		foreign_key: ${link_user_product_contract.hub_contract_key}
+		foreign_key: link_user_product_contract.hub_contract_key
 	}
 		
 
@@ -2802,14 +2802,14 @@ explore: hub_platform {
 	join: hub_subscription {
 		from: hub_subscription
 		required_joins: [link_user_platform, hub_user, link_user_subscription_product]
-		foreign_key: ${link_user_subscription_product.hub_subscription_key}
+		foreign_key: link_user_subscription_product.hub_subscription_key
 	}
 		
 
 	join: hub_serialnumber {
 		from: hub_serialnumber
 		required_joins: [link_user_platform, hub_user, link_user_product_serialnumber]
-		foreign_key: ${link_user_product_serialnumber.hub_serialnumber_key}
+		foreign_key: link_user_product_serialnumber.hub_serialnumber_key
 	}
 		
 
@@ -2832,7 +2832,7 @@ explore: hub_platform {
 	join: hub_product {
 		from: hub_product
 		required_joins: [link_user_platform, hub_user, link_user_product_contract]
-		foreign_key: ${link_user_product_contract.hub_product_key}
+		foreign_key: link_user_product_contract.hub_product_key
 	}
 		
 
@@ -2863,7 +2863,7 @@ explore: hub_platform {
 	join: hub_institution {
 		from: hub_institution
 		required_joins: [link_user_platform, hub_user, link_user_institution]
-		foreign_key: ${link_user_institution.hub_institution_key}
+		foreign_key: link_user_institution.hub_institution_key
 	}
 		
 
@@ -2878,7 +2878,7 @@ explore: hub_platform {
 	join: hub_coursesection {
 		from: hub_coursesection
 		required_joins: [link_user_platform, hub_user, link_user_coursesection]
-		foreign_key: ${link_user_coursesection.hub_coursesection_key}
+		foreign_key: link_user_coursesection.hub_coursesection_key
 	}
 		
 
@@ -2996,7 +2996,7 @@ explore: hub_platform {
 	join: hub_isbn {
 		from: hub_isbn
 		required_joins: [link_user_platform, hub_user, link_user_product_contract, hub_product, link_product_isbn]
-		foreign_key: ${link_product_isbn.hub_isbn_key}
+		foreign_key: link_product_isbn.hub_isbn_key
 	}
 		
 }
@@ -3069,7 +3069,7 @@ explore: hub_product {
 	join: hub_user {
 		from: hub_user
 		required_joins: [link_user_product_serialnumber]
-		foreign_key: ${link_user_product_serialnumber.hub_user_key}
+		foreign_key: link_user_product_serialnumber.hub_user_key
 	}
 		
 
@@ -3084,7 +3084,7 @@ explore: hub_product {
 	join: hub_contract {
 		from: hub_contract
 		required_joins: [link_user_product_contract]
-		foreign_key: ${link_user_product_contract.hub_contract_key}
+		foreign_key: link_user_product_contract.hub_contract_key
 	}
 		
 
@@ -3099,21 +3099,21 @@ explore: hub_product {
 	join: hub_subscription {
 		from: hub_subscription
 		required_joins: [link_user_subscription_product]
-		foreign_key: ${link_user_subscription_product.hub_subscription_key}
+		foreign_key: link_user_subscription_product.hub_subscription_key
 	}
 		
 
 	join: hub_serialnumber {
 		from: hub_serialnumber
 		required_joins: [link_user_product_serialnumber]
-		foreign_key: ${link_user_product_serialnumber.hub_serialnumber_key}
+		foreign_key: link_user_product_serialnumber.hub_serialnumber_key
 	}
 		
 
 	join: hub_isbn {
 		from: hub_isbn
 		required_joins: [link_product_isbn]
-		foreign_key: ${link_product_isbn.hub_isbn_key}
+		foreign_key: link_product_isbn.hub_isbn_key
 	}
 		
 
@@ -3283,7 +3283,7 @@ explore: hub_product {
 	join: hub_order {
 		from: hub_order
 		required_joins: [link_user_subscription_product, hub_subscription, link_subscription_order]
-		foreign_key: ${link_subscription_order.hub_order_key}
+		foreign_key: link_subscription_order.hub_order_key
 	}
 		
 
@@ -3298,14 +3298,14 @@ explore: hub_product {
 	join: hub_book {
 		from: hub_book
 		required_joins: [link_product_isbn, hub_isbn, link_book_isbn]
-		foreign_key: ${link_book_isbn.hub_book_key}
+		foreign_key: link_book_isbn.hub_book_key
 	}
 		
 
 	join: hub_platform {
 		from: hub_platform
 		required_joins: [link_user_product_serialnumber, hub_user, link_user_platform]
-		foreign_key: ${link_user_platform.hub_platform_key}
+		foreign_key: link_user_platform.hub_platform_key
 	}
 		
 
@@ -3368,7 +3368,7 @@ explore: hub_product {
 	join: hub_institution {
 		from: hub_institution
 		required_joins: [link_user_product_serialnumber, hub_user, link_user_institution]
-		foreign_key: ${link_user_institution.hub_institution_key}
+		foreign_key: link_user_institution.hub_institution_key
 	}
 		
 
@@ -3383,7 +3383,7 @@ explore: hub_product {
 	join: hub_coursesection {
 		from: hub_coursesection
 		required_joins: [link_product_isbn, hub_isbn, link_coursesection_isbn]
-		foreign_key: ${link_coursesection_isbn.hub_coursesection_key}
+		foreign_key: link_coursesection_isbn.hub_coursesection_key
 	}
 		
 
@@ -3443,14 +3443,14 @@ explore: hub_serialnumber {
 	join: hub_user {
 		from: hub_user
 		required_joins: [link_user_product_serialnumber]
-		foreign_key: ${link_user_product_serialnumber.hub_user_key}
+		foreign_key: link_user_product_serialnumber.hub_user_key
 	}
 		
 
 	join: hub_product {
 		from: hub_product
 		required_joins: [link_user_product_serialnumber]
-		foreign_key: ${link_user_product_serialnumber.hub_product_key}
+		foreign_key: link_user_product_serialnumber.hub_product_key
 	}
 		
 
@@ -3646,7 +3646,7 @@ explore: hub_serialnumber {
 	join: hub_order {
 		from: hub_order
 		required_joins: [link_user_product_serialnumber, hub_user, link_user_order]
-		foreign_key: ${link_user_order.hub_order_key}
+		foreign_key: link_user_order.hub_order_key
 	}
 		
 
@@ -3661,14 +3661,14 @@ explore: hub_serialnumber {
 	join: hub_book {
 		from: hub_book
 		required_joins: [link_user_product_serialnumber, hub_user, link_user_book]
-		foreign_key: ${link_user_book.hub_book_key}
+		foreign_key: link_user_book.hub_book_key
 	}
 		
 
 	join: hub_platform {
 		from: hub_platform
 		required_joins: [link_user_product_serialnumber, hub_user, link_user_platform]
-		foreign_key: ${link_user_platform.hub_platform_key}
+		foreign_key: link_user_platform.hub_platform_key
 	}
 		
 
@@ -3683,7 +3683,7 @@ explore: hub_serialnumber {
 	join: hub_contract {
 		from: hub_contract
 		required_joins: [link_user_product_serialnumber, hub_product, link_user_product_contract]
-		foreign_key: ${link_user_product_contract.hub_contract_key}
+		foreign_key: link_user_product_contract.hub_contract_key
 	}
 		
 
@@ -3714,7 +3714,7 @@ explore: hub_serialnumber {
 	join: hub_subscription {
 		from: hub_subscription
 		required_joins: [link_user_product_serialnumber, hub_product, link_user_subscription_product]
-		foreign_key: ${link_user_subscription_product.hub_subscription_key}
+		foreign_key: link_user_subscription_product.hub_subscription_key
 	}
 		
 
@@ -3745,7 +3745,7 @@ explore: hub_serialnumber {
 	join: hub_isbn {
 		from: hub_isbn
 		required_joins: [link_user_product_serialnumber, hub_product, link_product_isbn]
-		foreign_key: ${link_product_isbn.hub_isbn_key}
+		foreign_key: link_product_isbn.hub_isbn_key
 	}
 		
 
@@ -3768,7 +3768,7 @@ explore: hub_serialnumber {
 	join: hub_institution {
 		from: hub_institution
 		required_joins: [link_user_product_serialnumber, hub_user, link_user_institution]
-		foreign_key: ${link_user_institution.hub_institution_key}
+		foreign_key: link_user_institution.hub_institution_key
 	}
 		
 
@@ -3783,7 +3783,7 @@ explore: hub_serialnumber {
 	join: hub_coursesection {
 		from: hub_coursesection
 		required_joins: [link_user_product_serialnumber, hub_user, link_user_coursesection]
-		foreign_key: ${link_user_coursesection.hub_coursesection_key}
+		foreign_key: link_user_coursesection.hub_coursesection_key
 	}
 		
 
@@ -3887,21 +3887,21 @@ explore: hub_subscription {
 	join: hub_order {
 		from: hub_order
 		required_joins: [link_subscription_order]
-		foreign_key: ${link_subscription_order.hub_order_key}
+		foreign_key: link_subscription_order.hub_order_key
 	}
 		
 
 	join: hub_user {
 		from: hub_user
 		required_joins: [link_user_contract_subscription]
-		foreign_key: ${link_user_contract_subscription.hub_user_key}
+		foreign_key: link_user_contract_subscription.hub_user_key
 	}
 		
 
 	join: hub_contract {
 		from: hub_contract
 		required_joins: [link_user_contract_subscription]
-		foreign_key: ${link_user_contract_subscription.hub_contract_key}
+		foreign_key: link_user_contract_subscription.hub_contract_key
 	}
 		
 
@@ -3916,7 +3916,7 @@ explore: hub_subscription {
 	join: hub_product {
 		from: hub_product
 		required_joins: [link_user_subscription_product]
-		foreign_key: ${link_user_subscription_product.hub_product_key}
+		foreign_key: link_user_subscription_product.hub_product_key
 	}
 		
 
@@ -4094,14 +4094,14 @@ explore: hub_subscription {
 	join: hub_book {
 		from: hub_book
 		required_joins: [link_user_contract_subscription, hub_user, link_user_book]
-		foreign_key: ${link_user_book.hub_book_key}
+		foreign_key: link_user_book.hub_book_key
 	}
 		
 
 	join: hub_platform {
 		from: hub_platform
 		required_joins: [link_user_contract_subscription, hub_user, link_user_platform]
-		foreign_key: ${link_user_platform.hub_platform_key}
+		foreign_key: link_user_platform.hub_platform_key
 	}
 		
 
@@ -4148,7 +4148,7 @@ explore: hub_subscription {
 	join: hub_serialnumber {
 		from: hub_serialnumber
 		required_joins: [link_user_subscription_product, hub_product, link_user_product_serialnumber]
-		foreign_key: ${link_user_product_serialnumber.hub_serialnumber_key}
+		foreign_key: link_user_product_serialnumber.hub_serialnumber_key
 	}
 		
 
@@ -4163,7 +4163,7 @@ explore: hub_subscription {
 	join: hub_isbn {
 		from: hub_isbn
 		required_joins: [link_user_subscription_product, hub_product, link_product_isbn]
-		foreign_key: ${link_product_isbn.hub_isbn_key}
+		foreign_key: link_product_isbn.hub_isbn_key
 	}
 		
 
@@ -4194,7 +4194,7 @@ explore: hub_subscription {
 	join: hub_institution {
 		from: hub_institution
 		required_joins: [link_user_contract_subscription, hub_user, link_user_institution]
-		foreign_key: ${link_user_institution.hub_institution_key}
+		foreign_key: link_user_institution.hub_institution_key
 	}
 		
 
@@ -4209,7 +4209,7 @@ explore: hub_subscription {
 	join: hub_coursesection {
 		from: hub_coursesection
 		required_joins: [link_user_contract_subscription, hub_user, link_user_coursesection]
-		foreign_key: ${link_user_coursesection.hub_coursesection_key}
+		foreign_key: link_user_coursesection.hub_coursesection_key
 	}
 		
 
@@ -4418,7 +4418,7 @@ explore: hub_user {
 	join: hub_order {
 		from: hub_order
 		required_joins: [link_user_order]
-		foreign_key: ${link_user_order.hub_order_key}
+		foreign_key: link_user_order.hub_order_key
 	}
 		
 
@@ -4433,14 +4433,14 @@ explore: hub_user {
 	join: hub_book {
 		from: hub_book
 		required_joins: [link_user_book]
-		foreign_key: ${link_user_book.hub_book_key}
+		foreign_key: link_user_book.hub_book_key
 	}
 		
 
 	join: hub_platform {
 		from: hub_platform
 		required_joins: [link_user_platform]
-		foreign_key: ${link_user_platform.hub_platform_key}
+		foreign_key: link_user_platform.hub_platform_key
 	}
 		
 
@@ -4455,7 +4455,7 @@ explore: hub_user {
 	join: hub_contract {
 		from: hub_contract
 		required_joins: [link_user_product_contract]
-		foreign_key: ${link_user_product_contract.hub_contract_key}
+		foreign_key: link_user_product_contract.hub_contract_key
 	}
 		
 
@@ -4478,7 +4478,7 @@ explore: hub_user {
 	join: hub_subscription {
 		from: hub_subscription
 		required_joins: [link_user_subscription_product]
-		foreign_key: ${link_user_subscription_product.hub_subscription_key}
+		foreign_key: link_user_subscription_product.hub_subscription_key
 	}
 		
 
@@ -4493,7 +4493,7 @@ explore: hub_user {
 	join: hub_serialnumber {
 		from: hub_serialnumber
 		required_joins: [link_user_product_serialnumber]
-		foreign_key: ${link_user_product_serialnumber.hub_serialnumber_key}
+		foreign_key: link_user_product_serialnumber.hub_serialnumber_key
 	}
 		
 
@@ -4516,7 +4516,7 @@ explore: hub_user {
 	join: hub_product {
 		from: hub_product
 		required_joins: [link_user_product_contract]
-		foreign_key: ${link_user_product_contract.hub_product_key}
+		foreign_key: link_user_product_contract.hub_product_key
 	}
 		
 
@@ -4547,7 +4547,7 @@ explore: hub_user {
 	join: hub_institution {
 		from: hub_institution
 		required_joins: [link_user_institution]
-		foreign_key: ${link_user_institution.hub_institution_key}
+		foreign_key: link_user_institution.hub_institution_key
 	}
 		
 
@@ -4562,7 +4562,7 @@ explore: hub_user {
 	join: hub_coursesection {
 		from: hub_coursesection
 		required_joins: [link_user_coursesection]
-		foreign_key: ${link_user_coursesection.hub_coursesection_key}
+		foreign_key: link_user_coursesection.hub_coursesection_key
 	}
 		
 
@@ -4680,7 +4680,7 @@ explore: hub_user {
 	join: hub_isbn {
 		from: hub_isbn
 		required_joins: [link_user_book, hub_book, link_book_isbn]
-		foreign_key: ${link_book_isbn.hub_isbn_key}
+		foreign_key: link_book_isbn.hub_isbn_key
 	}
 		
 }
