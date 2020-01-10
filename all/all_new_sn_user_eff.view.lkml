@@ -48,6 +48,18 @@ view: all_new_sn_user_eff {
 	}
 		
 
+	dimension: link_serialnumber_user_key {
+		type: string
+		sql: ${TABLE}."LINK_SERIALNUMBER_USER_KEY" ;;
+	}
+		
+
+	dimension: hash_diff {
+		type: string
+		sql: ${TABLE}."HASH_DIFF" ;;
+	}
+		
+
 
 	measure: count {
 		type: count
@@ -58,7 +70,7 @@ view: all_new_sn_user_eff {
 
 
 	set: all_dims_but_primary {
-		fields: [local_time_date, local_time_week, local_time_month, local_time_quarter, local_time_year, serial_number, user_sso_guid, user_environment, effective_from_date, effective_from_week, effective_from_month, effective_from_quarter, effective_from_year, is_effective, effective_to_date, effective_to_week, effective_to_month, effective_to_quarter, effective_to_year]
+		fields: [local_time_date, local_time_week, local_time_month, local_time_quarter, local_time_year, serial_number, user_sso_guid, user_environment, effective_from_date, effective_from_week, effective_from_month, effective_from_quarter, effective_from_year, is_effective, effective_to_date, effective_to_week, effective_to_month, effective_to_quarter, effective_to_year, link_serialnumber_user_key, hash_diff]
 	}
 		 
 
