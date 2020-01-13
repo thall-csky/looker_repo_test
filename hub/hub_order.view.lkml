@@ -8,22 +8,26 @@ view: hub_order {
 		type: string
 		sql: ${TABLE}."HUB_ORDER_KEY" ;;
 	}
+		
 
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
+		
 
 	dimension: _rsrc {
 		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
+		
 
 	dimension: order_id {
 		type: string
 		sql: ${TABLE}."ORDER_ID" ;;
 	}
+		
 
 
 	measure: count {

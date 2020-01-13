@@ -8,44 +8,52 @@ view: sat_serialnumber_product {
 		type: string
 		sql: ${TABLE}."LINK_SERIALNUMBER_PRODUCT_KEY", ' ', ${TABLE}."HASH_DIFF" ;;
 	}
+		
 
 	dimension: link_serialnumber_product_key {
 		type: string
 		sql: ${TABLE}."LINK_SERIALNUMBER_PRODUCT_KEY" ;;
 	}
+		
 
 	dimension: hash_diff {
 		type: string
 		sql: ${TABLE}."HASH_DIFF" ;;
 	}
+		
 
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
+		
 
 	dimension: _rsrc {
 		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
+		
 
 	dimension: is_effective {
 		type: yesno
 		sql: ${TABLE}."IS_EFFECTIVE" ;;
 	}
+		
 
 	dimension_group: effective_from {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
 		sql: ${TABLE}."EFFECTIVE_FROM" ;;
 	}
+		
 
 	dimension_group: effective_to {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
 		sql: ${TABLE}."EFFECTIVE_TO" ;;
 	}
+		
 
 
 	measure: count {
