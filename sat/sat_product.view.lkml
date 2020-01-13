@@ -103,6 +103,18 @@ view: sat_product {
 	}
 		
 
+	dimension: product_assets {
+		type: string
+		sql: ${TABLE}."PRODUCT_ASSETS" ;;
+	}
+		
+
+	dimension: parent_product_identifiers {
+		type: string
+		sql: ${TABLE}."PARENT_PRODUCT_IDENTIFIERS" ;;
+	}
+		
+
 	dimension: deleted {
 		type: yesno
 		sql: ${TABLE}."DELETED" ;;
@@ -119,7 +131,7 @@ view: sat_product {
 
 
 	set: all_dims_but_primary {
-		fields: [hub_product_key, hash_diff, _ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, active, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, name, type, part_id, create_date_date, create_date_week, create_date_month, create_date_quarter, create_date_year, modified_by, subscription_duration, access_code_type, pubco_publisher_id, pubco_product_id, deleted]
+		fields: [hub_product_key, hash_diff, _ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, active, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, name, type, part_id, create_date_date, create_date_week, create_date_month, create_date_quarter, create_date_year, modified_by, subscription_duration, access_code_type, pubco_publisher_id, pubco_product_id, product_assets, parent_product_identifiers, deleted]
 	}
 		 
 
