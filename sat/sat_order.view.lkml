@@ -67,12 +67,6 @@ view: sat_order {
 	}
 		
 
-	dimension: order_line {
-		type: string
-		sql: ${TABLE}."ORDER_LINE" ;;
-	}
-		
-
 	dimension: order_source {
 		type: string
 		sql: ${TABLE}."ORDER_SOURCE" ;;
@@ -119,7 +113,7 @@ view: sat_order {
 
 
 	set: all_dims_but_primary {
-		fields: [link_user_contract_key, hash_diff, _ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, order_id, internal, currency_code, order_date_date, order_date_week, order_date_month, order_date_quarter, order_date_year, order_line, order_source, order_taken_by, total_amount, po_number, processed_method, store_id]
+		fields: [link_user_contract_key, hash_diff, _ldts_date, _ldts_week, _ldts_month, _ldts_quarter, _ldts_year, _rsrc, rsrc_timestamp_date, rsrc_timestamp_week, rsrc_timestamp_month, rsrc_timestamp_quarter, rsrc_timestamp_year, order_id, internal, currency_code, order_date_date, order_date_week, order_date_month, order_date_quarter, order_date_year, order_source, order_taken_by, total_amount, po_number, processed_method, store_id]
 	}
 		 
 
