@@ -8,44 +8,37 @@ view: sat_user_internal {
 		type: string
 		sql: ${TABLE}."HUB_USER_KEY", ' ', ${TABLE}."_LDTS" ;;
 	}
-		
 
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
-		
 
 	dimension: hub_user_key {
 		type: string
 		sql: ${TABLE}."HUB_USER_KEY" ;;
 	}
-		
 
 	dimension: _rsrc {
 		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
-		
 
 	dimension: hash_diff {
 		type: string
 		sql: ${TABLE}."HASH_DIFF" ;;
 	}
-		
 
 	dimension: active {
 		type: yesno
 		sql: ${TABLE}."ACTIVE" ;;
 	}
-		
 
 	dimension: internal {
 		type: yesno
 		sql: ${TABLE}."INTERNAL" ;;
 	}
-		
 
 
 	measure: count {

@@ -8,32 +8,27 @@ view: link_user_product {
 		type: string
 		sql: ${TABLE}."LINK_USER_PRODUCT_KEY" ;;
 	}
-		
 
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
-		
 
 	dimension: _rsrc {
 		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
-		
 
 	dimension: hub_user_key {
 		type: string
 		sql: ${TABLE}."HUB_USER_KEY" ;;
 	}
-		
 
 	dimension: hub_product_key {
 		type: string
 		sql: ${TABLE}."HUB_PRODUCT_KEY" ;;
 	}
-		
 
 
 	measure: count {

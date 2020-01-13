@@ -8,45 +8,38 @@ view: sat_user_institution {
 		type: string
 		sql: ${TABLE}."LINK_USER_INSTITUTION_KEY", ' ', ${TABLE}."HASH_DIFF" ;;
 	}
-		
 
 	dimension: link_user_institution_key {
 		type: string
 		sql: ${TABLE}."LINK_USER_INSTITUTION_KEY" ;;
 	}
-		
 
 	dimension: hash_diff {
 		type: string
 		sql: ${TABLE}."HASH_DIFF" ;;
 	}
-		
 
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
-		
 
 	dimension: _rsrc {
 		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
-		
 
 	dimension: active {
 		type: yesno
 		sql: ${TABLE}."ACTIVE" ;;
 	}
-		
 
 	dimension_group: created_at {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
 		sql: ${TABLE}."CREATED_AT" ;;
 	}
-		
 
 
 	measure: count {

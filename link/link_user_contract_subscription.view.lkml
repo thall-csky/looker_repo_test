@@ -8,38 +8,32 @@ view: link_user_contract_subscription {
 		type: string
 		sql: ${TABLE}."LINK_USER_CONTRACT_SUBSCRIPTION_KEY" ;;
 	}
-		
 
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
-		
 
 	dimension: _rsrc {
 		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
-		
 
 	dimension: hub_user_key {
 		type: string
 		sql: ${TABLE}."HUB_USER_KEY" ;;
 	}
-		
 
 	dimension: hub_contract_key {
 		type: string
 		sql: ${TABLE}."HUB_CONTRACT_KEY" ;;
 	}
-		
 
 	dimension: hub_subscription_key {
 		type: string
 		sql: ${TABLE}."HUB_SUBSCRIPTION_KEY" ;;
 	}
-		
 
 
 	measure: count {

@@ -8,26 +8,22 @@ view: hub_subscription {
 		type: string
 		sql: ${TABLE}."HUB_SUBSCRIPTION_KEY" ;;
 	}
-		
 
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
-		
 
 	dimension: _rsrc {
 		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
-		
 
 	dimension: subscription_id {
 		type: string
 		sql: ${TABLE}."SUBSCRIPTION_ID" ;;
 	}
-		
 
 
 	measure: count {

@@ -8,26 +8,22 @@ view: hub_contract {
 		type: string
 		sql: ${TABLE}."HUB_CONTRACT_KEY" ;;
 	}
-		
 
 	dimension_group: _ldts {
 		timeframes: [raw, time, date, week, month, quarter, year]
 		type: time
 		sql: ${TABLE}."_LDTS" ;;
 	}
-		
 
 	dimension: _rsrc {
 		type: string
 		sql: ${TABLE}."_RSRC" ;;
 	}
-		
 
 	dimension: contract_id {
 		type: string
 		sql: ${TABLE}."CONTRACT_ID" ;;
 	}
-		
 
 
 	measure: count {
