@@ -1,10 +1,11 @@
 
 connection: "snowflake_prod_datavault"
 
+include: "internal/*.view.lkml"
 include: "link/*.view.lkml"
-include: "sat/*.view.lkml"
-include: "pit/*.view.lkml"
 include: "hub/*.view.lkml"
+include: "pit/*.view.lkml"
+include: "sat/*.view.lkml"
 
 
 explore: books {
